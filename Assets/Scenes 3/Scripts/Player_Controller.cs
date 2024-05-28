@@ -50,5 +50,5 @@ public class Player : MonoBehaviour
             nhay1L = true;
         }
         if(Alive == false) return;
-    }
+    }   
 }
