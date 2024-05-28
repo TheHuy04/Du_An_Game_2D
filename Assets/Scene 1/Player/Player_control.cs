@@ -8,8 +8,7 @@ public class Player_control : MonoBehaviour
     private bool _moveRight = true;
     [SerializeField]
     private float _moveSpeed = 5f;
-    [SerializeField]
-    private float _jumpForce = 3f;
+   
     [SerializeField]
     private Rigidbody2D _rigidbody2D;
     [SerializeField]
@@ -31,7 +30,7 @@ public class Player_control : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
+        
     }
     private void Move()
     {
@@ -57,22 +56,5 @@ public class Player_control : MonoBehaviour
             new Vector2(0.7f, 0.7f)
             : new Vector2(-0.7f, 0.7f);
     }
-    private void Jump()
-    {
-        var check = _boxCollider2D.IsTouchingLayers(LayerMask.GetMask("Flatform"));
-        if (check == false)
-        {
-            return;
-        }
-        var verticalInput = Input.GetKeyDown(KeyCode.Space) ? 1 : 0;
-        if (verticalInput > 0)
-        {
-            _animator.SetBool("IsJump", true);
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpForce);
-        }
-        else
-        {
-            _animator.SetBool("IsJump", false);
-        }
-    }
+   
 }
