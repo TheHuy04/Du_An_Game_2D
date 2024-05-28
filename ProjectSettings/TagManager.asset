@@ -8,6 +8,7 @@ TagManager:
   - gate
   - lander
   - Bullet
+  - Tilemap
   layers:
   - Default
   - TransparentFX
