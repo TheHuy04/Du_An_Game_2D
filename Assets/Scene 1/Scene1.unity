@@ -1341,6 +1341,37 @@ Transform:
   - {fileID: 464844098}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809198297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809198298}
+  m_Layer: 0
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809198298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809198297}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.79, y: -0.33, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2141433447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1707925313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1353,7 +1384,7 @@ GameObject:
   - component: {fileID: 1707925316}
   - component: {fileID: 1707925315}
   - component: {fileID: 1707925317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tilemap
   m_TagString: Tilemap
   m_Icon: {fileID: 0}
@@ -10698,7 +10729,7 @@ GameObject:
   - component: {fileID: 2141433449}
   - component: {fileID: 2141433448}
   m_Layer: 0
-  m_Name: SPA_Player_Ginger_5
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10730,7 +10761,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &2141433445
 Animator:
   serializedVersion: 5
@@ -10816,7 +10847,8 @@ Transform:
   m_LocalPosition: {x: -1.27, y: 0.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 809198298}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2141433448
@@ -10831,12 +10863,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccc6ebc216e628468147991d3a8bcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveRight: 1
-  _moveSpeed: 5
+  moveSpeed: 5
+  _isMovingRight: 1
   _jumpForce: 3
-  _rigidbody2D: {fileID: 0}
-  _animator: {fileID: 0}
-  _boxCollider2D: {fileID: 0}
+  _bulletPrefab: {fileID: 5487630579198167573, guid: 8d1d566da49875949be8a2ed7241012e, type: 3}
+  _arrow: {fileID: 809198298}
 --- !u!61 &2141433449
 BoxCollider2D:
   m_ObjectHideFlags: 0
