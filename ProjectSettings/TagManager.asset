@@ -7,6 +7,7 @@ TagManager:
   - enemy
   - gate
   - lander
+  - Bullet
   layers:
   - Default
   - TransparentFX
