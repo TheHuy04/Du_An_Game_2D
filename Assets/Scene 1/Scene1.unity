@@ -196,7 +196,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -10823,7 +10823,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 592501148, guid: 4b5f3ccc4110e0b468a9e84f32d173b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10865,7 +10865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   _isMovingRight: 1
-  _jumpForce: 3
+  _jumpForce: 5
   _bulletPrefab: {fileID: 5487630579198167573, guid: 8d1d566da49875949be8a2ed7241012e, type: 3}
   _arrow: {fileID: 809198298}
 --- !u!61 &2141433449
