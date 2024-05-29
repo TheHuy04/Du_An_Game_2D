@@ -11,7 +11,7 @@ public class Player_control : MonoBehaviour
     private bool _isMovingRight = true;
     private Rigidbody2D _rigidbody2D;
     [SerializeField]
-    private float _jumpForce = 200f;
+    private float _jumpForce = 5f;
     [SerializeField]
     private GameObject _bulletPrefab;
     [SerializeField]
@@ -61,7 +61,7 @@ public class Player_control : MonoBehaviour
     }
     private void Jump()
     {
-        var check = _boxCollider2D.IsTouchingLayers(LayerMask.GetMask("Platform"));
+        var check = _boxCollider2D.IsTouchingLayers(LayerMask.GetMask("Flat_form"));
         if (check == false)
         {
             return;
@@ -69,14 +69,12 @@ public class Player_control : MonoBehaviour
         var verticalInput = Input.GetKeyDown(KeyCode.Space) ? 1 : 0;
         if (verticalInput > 0)
         {
-            // cung cấp 1 lực đẩy lên trên
-            //_rigidbody2D.AddForce(new Vector2(0, _jumpForce));
-            _animator.SetBool("Nhay", true);
+            _animator.SetBool("IsJump", true);
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpForce);
         }
         else
         {
-            _animator.SetBool("Nhay", false);
+            _animator.SetBool("IsJump", false);
         }
     }
     private void Fire()
