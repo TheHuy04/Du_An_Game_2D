@@ -9,6 +9,7 @@ TagManager:
   - lander
   - enemy
   - exit
+  - jump
   layers:
   - Default
   - TransparentFX
