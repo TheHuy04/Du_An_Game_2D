@@ -1,3 +1,6 @@
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -12,10 +15,12 @@ public class Player : MonoBehaviour
     private float h_move;
     private bool nhay1L;
     bool Alive = true;
+    private Animator anm;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anm = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +29,7 @@ public class Player : MonoBehaviour
         //di chuyen
         h_move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
+        anm.SetFloat("isRunning",Mathf.Abs(h_move));
 
         if(Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
@@ -50,5 +56,5 @@ public class Player : MonoBehaviour
             nhay1L = true;
         }
         if(Alive == false) return;
-    }
+    }   
 }
