@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Undefined
+  - gate
+  - Ground
+  - lander
+  - exit
+  - jump
+  - enemy
+  - Enemy
+  - ground
+  - Ladder
+  - Gate
+  - Button
   layers:
   - Default
   - TransparentFX

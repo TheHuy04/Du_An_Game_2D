@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 17585390}
   m_Layer: 0
   m_Name: IdelDoor
-  m_TagString: gate
+  m_TagString: Gate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,6 +634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flight_0 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 200438587264335959, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5295846403513717172, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54.380547
@@ -856,6 +860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flight_0 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 200438587264335959, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5295846403513717172, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 38.655167
@@ -962,6 +970,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Run_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8584308808969886046, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -35.21
@@ -1018,6 +1030,10 @@ PrefabInstance:
     - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_Name
       value: Run_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8584308808969886046, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1668,6 +1684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SPA_Enemy_Right_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7403324937185538755, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.674065
@@ -1821,7 +1841,7 @@ GameObject:
   - component: {fileID: 701498283}
   m_Layer: 0
   m_Name: SPA_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1993,6 +2013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flight_0 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 200438587264335959, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5295846403513717172, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -71.976616
@@ -2052,7 +2076,7 @@ GameObject:
   - component: {fileID: 816634059}
   m_Layer: 0
   m_Name: Flatform
-  m_TagString: Ground
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21471,7 +21495,7 @@ GameObject:
   - component: {fileID: 869007769}
   m_Layer: 0
   m_Name: Ladder
-  m_TagString: lander
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22431,7 +22455,7 @@ GameObject:
   - component: {fileID: 887186611}
   m_Layer: 0
   m_Name: Square (1)
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22784,6 +22808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Run_0 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7931269024386042913, guid: cdae1b2b95423d942a45c7289af8102e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23107,6 +23135,10 @@ PrefabInstance:
     - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_Name
       value: SPA_Enemy_Right_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7403324937185538755, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23435,6 +23467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walk_0
       objectReference: {fileID: 0}
+    - target: {fileID: 8614174488252920770, guid: c5a12e45f8b05fc4a952d2f90c97de8c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23451,6 +23487,10 @@ PrefabInstance:
     - target: {fileID: 200438587264335959, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
       propertyPath: m_Name
       value: Flight_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 200438587264335959, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5295846403513717172, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23508,6 +23548,10 @@ PrefabInstance:
     - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_Name
       value: SPA_Enemy_Right_0 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7403324937185538755, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23668,6 +23712,10 @@ PrefabInstance:
     - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_Name
       value: Run_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8584308808969886046, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23944,7 +23992,7 @@ GameObject:
   - component: {fileID: 2031198993}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Ground
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24170,7 +24218,7 @@ GameObject:
   - component: {fileID: 2090571932}
   m_Layer: 0
   m_Name: Acid
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28469,6 +28517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Run_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931269024386042913, guid: cdae1b2b95423d942a45c7289af8102e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28526,6 +28578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walk_0
       objectReference: {fileID: 0}
+    - target: {fileID: 8614174488252920770, guid: c5a12e45f8b05fc4a952d2f90c97de8c, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28562,6 +28618,10 @@ PrefabInstance:
     - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_Name
       value: Run_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 833302442834493067, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8584308808969886046, guid: 916915b663a8fea4d90585bb59d2a81a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28635,6 +28695,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flight_0
       objectReference: {fileID: 0}
+    - target: {fileID: 200438587264335959, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5295846403513717172, guid: 091df2ff06d84af42accad3cee9b80b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -63.70391
@@ -28691,6 +28755,10 @@ PrefabInstance:
     - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_Name
       value: SPA_Enemy_Right_0 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568575027699799969, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7403324937185538755, guid: 4f7b8a589f6920b49954626262a5bda6, type: 3}
       propertyPath: m_LocalPosition.x
