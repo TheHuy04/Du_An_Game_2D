@@ -30,18 +30,18 @@ public class Slime_enemy : MonoBehaviour
         }
         Move();
     }
-    public void Move()
+    private void Move()
     {
         Vector2 direction = _moveRight ? Vector2.right : Vector2.left;
         transform.Translate(direction * _moveSpeed *Time.deltaTime);
     }
-    public void Flip()
+    private void Flip()
     {
         Vector2 Scale = transform.localScale;
         Scale.x *= - 1;
         transform.localScale = Scale;
     }
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
