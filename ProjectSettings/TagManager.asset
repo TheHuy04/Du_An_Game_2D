@@ -8,6 +8,7 @@ TagManager:
   - gate
   - Ground
   - lander
+<<<<<<< HEAD
   - exit
   - jump
   - enemy
@@ -16,6 +17,13 @@ TagManager:
   - Ladder
   - Gate
   - Button
+=======
+  - Bullet
+  - Tilemap
+  - Trap
+  - Ground
+  - Gate2
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
