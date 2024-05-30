@@ -1,21 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_control : MonoBehaviour
 {
 
-    [SerializeField]
-    private float moveSpeed = 5f;
-    [SerializeField]
-    private bool _isMovingRight = true;
+    
+    public float moveSpeed = 5f;
+    
+    public bool _isMovingRight = true;
     private Rigidbody2D _rigidbody2D;
-    [SerializeField]
-    private float _jumpForce = 5f;
-    [SerializeField]
-    private GameObject _bulletPrefab;
-    [SerializeField]
-    private Transform _arrow;
+    
+    public float _jumpForce = 5f;
+    
+    public GameObject _bulletPrefab;
+    
+    public Transform _arrow;
+
+    public bool Climb;
 
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
@@ -33,6 +37,12 @@ public class Player_control : MonoBehaviour
         Move();
         Jump();
         Fire();
+        if( Climb)
+        {
+            var lenThang = Input.GetAxisRaw("Horizontal");
+            var lenThang2 = Input.GetAxisRaw("Vertical");
+            _rigidbody2D.velocity = new Vector3 (lenThang *1f, lenThang2 *3f, 0f);
+        }
     }
     private void Move()
     {
@@ -99,7 +109,24 @@ public class Player_control : MonoBehaviour
         {
             _animator.SetBool("IsAttack", false);
         }
-        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("lander"))
+        {
+            _rigidbody2D.gravityScale = 0;
+            Climb = true;
+            _animator.SetBool("Is_land", true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("lander"))
+        {
+            _rigidbody2D.gravityScale = 1f;
+            Climb= false;
+            _animator.SetBool("Is_land", false);
+        }
     }
 
 }
