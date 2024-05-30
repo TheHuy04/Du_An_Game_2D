@@ -1,39 +1,48 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
-    public float timer = 1f;
+    public int speed = 1;
+    public Transform diemBatDau;
+    public Transform diemKetThuc;
+    private Vector2 diemMucTieu;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(movingflatform());
+        diemMucTieu = diemBatDau.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timer == 1)
+        if (Vector2.Distance(transform.position, diemBatDau.position) < 0.1f) 
         {
-            transform.Translate(Vector3.left * 2f * Time.deltaTime);
+            diemMucTieu = diemKetThuc.position;
         }
-        else if (timer == 0)
+        if(Vector2.Distance(transform.position, diemKetThuc.position) < 0.1f)
         {
-            transform.Translate(Vector3.right * 2f * Time.deltaTime);
+            diemMucTieu = diemBatDau.position;
+        }
+        transform.position  =Vector2.MoveTowards(transform.position,diemMucTieu,speed * Time.deltaTime);
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(this.transform);
         }
     }
-    IEnumerator movingflatform()
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        while (timer == 1)
+        if (collision.CompareTag("Player"))
         {
-            timer -= 1;
-            yield return new WaitForSeconds(2f);
-            while (timer == 0)
-            {
-                timer += 1;
-                yield return new WaitForSeconds(2f);
-            }
+            collision.transform.SetParent(null);
         }
     }
 }
