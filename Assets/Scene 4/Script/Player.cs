@@ -22,20 +22,20 @@ public class Player1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.Translate(Vector3.right * 5f * Time.deltaTime);
             transform.localScale = new Vector3(1f, 1f, 1f);
             ani.SetBool("Speed", true);
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector3.left * 5f * Time.deltaTime);
             transform.localScale = new Vector3(-1f, 1f, 1f);
             ani.SetBool("Speed", true);
         }
         else ani.SetBool("Speed", false);
-        if (Input.GetKeyDown(KeyCode.W) && jump)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && jump)
         {
             qf.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
         }

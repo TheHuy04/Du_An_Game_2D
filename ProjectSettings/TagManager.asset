@@ -7,9 +7,16 @@ TagManager:
   - enemy
   - gate
   - lander
+<<<<<<< HEAD
+  - enemy
+  - exit
+  - jump
+  - acid
+=======
   - Bullet
   - Tilemap
   - Trap
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
