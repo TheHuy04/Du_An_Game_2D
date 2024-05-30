@@ -9,6 +9,7 @@ TagManager:
   - lander
   - enemy
   - exit
+  - water
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: van
+    uniqueID: 2406921297
+    locked: 0
+  - name: water
+    uniqueID: 3236353771
     locked: 0
