@@ -52,12 +52,12 @@ public class Player1 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
         {
             jump = true;
             ani.SetBool("Force", false);
         }
-        if (collision.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             mang -= 1;
             lifetext.text = "Life " + mang;
@@ -66,7 +66,7 @@ public class Player1 : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
         {
             jump = false;
             ani.SetBool("Force",true);
@@ -74,7 +74,7 @@ public class Player1 : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("lander"))
+        if (collision.CompareTag("Ladder"))
         {
             qf.gravityScale = 0;
             climbing = true;
@@ -83,7 +83,7 @@ public class Player1 : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("lander"))
+        if (collision.CompareTag("Ladder"))
         {
             qf.gravityScale = 1f;
             climbing = false;
