@@ -4,18 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Gate
-  - Enemy
-  - ground
-  - Ladder
-  - Button
-  - exit
-  - jump
-  - Ground
-  - Doc
-  - water
+  - lander
+  - Tilemap
+  - enemy
+  - Bullet
   - Cong
-  - Slime
   layers:
   - Default
   - TransparentFX
@@ -23,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Flat_form
   - 
   - 
   - 
