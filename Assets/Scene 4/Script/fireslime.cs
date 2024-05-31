@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class fireslime : MonoBehaviour
 {
     public GameObject slimebullletprefab;
     public Transform fireball;
     public float timers = 1f;
-    public float health = 4f;
-    public Text cointext;
-    public float coin;
+    public float health = 5f;
+    public int points = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +23,11 @@ public class fireslime : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 3f;
-            cointext.text = coin + " Coin";
+            Player4 kill5 = GameObject.FindWithTag("Player").GetComponent<Player4>();
+            if(kill5 != null)
+            {
+                kill5.addscore(points);
+            }
         }
     }
     IEnumerator timeforshoot()

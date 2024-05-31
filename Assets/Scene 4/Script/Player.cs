@@ -1,10 +1,12 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class Player4 : MonoBehaviour
 {
     public float diem = 0;
     public Rigidbody2D qf;
@@ -23,6 +25,7 @@ public class Player : MonoBehaviour
     {
         qf = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -61,10 +64,10 @@ public class Player : MonoBehaviour
             shoot();
         }
     }
-    public void Addscore(int point)
+    public void addscore(int points)
     {
-        diem += point;
-        pointtext.text = diem + " Coin";
+        diem += points;
+        pointtext.text = points + " Coin";
     }
     public void shoot()
     {

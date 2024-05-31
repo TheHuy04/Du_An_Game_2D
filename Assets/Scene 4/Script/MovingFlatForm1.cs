@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class flyingenemy : MonoBehaviour
 {
     public float health = 4f;
     public float timer = 1f;
-    public int point = 3;
+    public int points = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +29,12 @@ public class flyingenemy : MonoBehaviour
         }
         if(health == 0)
         {
-            Destroy(this.gameObject); 
+            Destroy(this.gameObject);
+            Player4 kill = GameObject.FindWithTag("Player").GetComponent<Player4>();
+            if(kill != null)
+            {
+                kill.addscore(points);
+            }
         }
     }
     IEnumerator movingflatform()

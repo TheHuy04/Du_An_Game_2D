@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class goblin : MonoBehaviour
 {
     public float timer = 1f;
-    public float health = 2f;
-    public Text cointext;
-    public float coin;
+    public float health = 4f;
+    public int points = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +30,11 @@ public class goblin : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 1f;
-            cointext.text = coin + " Coin";
+            Player4 kill4 = GameObject.FindWithTag("Player").GetComponent<Player4>();
+            if(kill4 != null)
+            {
+                kill4.addscore(points);
+            }
         }
     }
     IEnumerator movingflatform()

@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class skeletons : MonoBehaviour
 {
     public float timer = 1f;
     public float health = 10f;
-    public Text cointext;
-    public float coin;
+    public int points = 9;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +30,11 @@ public class skeletons : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 9f;
-            cointext.text = coin + " Coin";
+            Player4 kill3 = GameObject.FindWithTag("Player").GetComponent<Player4>();
+            if(kill3 != null)
+            {
+                kill3.addscore(points);
+            }
         }
     }
     IEnumerator movingflatform()

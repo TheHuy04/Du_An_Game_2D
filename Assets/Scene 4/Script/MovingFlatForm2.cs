@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class slime : MonoBehaviour
 {
     public float health = 2f;
     public float timer = 1f;
-    public float coin;
-    public Text cointext;
+    public int points = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +29,11 @@ public class slime : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 1f;
-            cointext.text = coin + " Coin";
+            Player4 kill1 = GameObject.FindWithTag("Player").GetComponent<Player4>();
+            if(kill1 != null)
+            {
+                kill1.addscore(points);
+            }
         }
     }
     IEnumerator movingflatform()

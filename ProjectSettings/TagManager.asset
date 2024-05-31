@@ -4,14 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - lander
-  - Tilemap
-  - enemy
-  - Bullet
-  - Cong
+  - Gate
+  - Enemy
+  - ground
+  - Ladder
+  - Button
+  - exit
+  - jump
   - bullet
-  - Ground
-  - Player3
+  - Players
+  - enemy
   layers:
   - Default
   - TransparentFX

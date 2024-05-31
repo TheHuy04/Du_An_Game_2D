@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class musroom : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float timer = 1f;
     public float health = 5f;
-    public Text cointext;
-    public float coin;
+    public int points = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +32,11 @@ public class musroom : MonoBehaviour
         if (health == 0)
         {
             Destroy(this.gameObject);
-            coin += 4f;
-            cointext.text = coin + " Coin";
+            Player4 kill2 = GameObject.FindWithTag("Player").GetComponent<Player4>();
+            if (kill2 != null)
+            {
+                kill2.addscore(points);
+            }
         }
     }
     IEnumerator movingflatform()
