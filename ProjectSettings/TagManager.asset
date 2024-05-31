@@ -4,6 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Gate
+  - Enemy
+  - ground
+  - Ladder
+  - Button
+  - exit
+  - jump
   - Ground
   - Doc
   - water

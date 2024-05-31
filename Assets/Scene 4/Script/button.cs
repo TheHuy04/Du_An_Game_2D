@@ -22,7 +22,6 @@ public class button : MonoBehaviour
             ani.SetBool("click", true);
             Destroy(gate);
         }
-        else ani.SetBool("click", false);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
