@@ -28,11 +28,11 @@ public class MovingFlatForm : MonoBehaviour
         while(timer == 1)
         {
             timer -= 1;
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(7f);
             while (timer == 0)
             {
                 timer += 1;
-                yield return new WaitForSeconds(6f);
+                yield return new WaitForSeconds(7f);
             }
         }
     }
