@@ -12,6 +12,9 @@ public class Player1 : MonoBehaviour
     public Text lifetext;
     public Transform checkpoint;
     public bool climbing;
+    public GameObject arrowprefab;
+    public Transform bowpos;
+    public float arrowmain = 30f;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,7 @@ public class Player1 : MonoBehaviour
         {
             qf.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
         }
-        if(mang < 1)
+        if (mang < 1)
         {
             Destroy(this.gameObject);
         }
@@ -47,8 +50,20 @@ public class Player1 : MonoBehaviour
         {
             var leothang = Input.GetAxisRaw("Horizontal");
             var leothang2 = Input.GetAxisRaw("Vertical");
-            qf.velocity = new Vector3(leothang *1f, leothang2 *3f, 0);
+            qf.velocity = new Vector3(leothang * 1f, leothang2 * 3f, 0);
         }
+        if (Input.GetKeyDown(KeyCode.Space) && arrowmain > 0)
+        {
+            arrowmain -= 1f;
+            shoot();
+        }
+    }
+    public void shoot() 
+    {
+        GameObject arr = Instantiate(arrowprefab,bowpos.position, bowpos.rotation);
+        Rigidbody2D rb = arr.GetComponent<Rigidbody2D>();
+        rb.AddForce(Vector3.right * 50f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
+        Destroy(rb.gameObject, 2f);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

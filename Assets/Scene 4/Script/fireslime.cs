@@ -8,6 +8,7 @@ public class fireslime : MonoBehaviour
     public GameObject slimebullletprefab;
     public Transform fireball;
     public float timers = 1f;
+    public float health = 4f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,10 @@ public class fireslime : MonoBehaviour
     void Update()
     {
         shoot();
+        if(health == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
     IEnumerator timeforshoot()
     {
@@ -32,6 +37,14 @@ public class fireslime : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet"))
+        {
+            health -= 1f;
+            Destroy(collision.gameObject);
+        }
+    }
     public void shoot()
     {
         if(timers == 0)
@@ -39,7 +52,7 @@ public class fireslime : MonoBehaviour
             GameObject go = Instantiate(slimebullletprefab, fireball.position, fireball.rotation);
             Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
             rb.AddForce(fireball.right * 26f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
-            Destroy(rb.gameObject, 2f);
+            Destroy(rb.gameObject, 1.5f);
         }
     }
 }

@@ -11,11 +11,7 @@ TagManager:
   - Button
   - exit
   - jump
-  - Ground
-  - Doc
-  - water
-  - Cong
-  - Slime
+  - bullet
   layers:
   - Default
   - TransparentFX
