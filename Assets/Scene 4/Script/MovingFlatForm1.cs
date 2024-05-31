@@ -8,8 +8,7 @@ public class flyingenemy : MonoBehaviour
 {
     public float health = 4f;
     public float timer = 1f;
-    public Text cointext;
-    public float coin;
+    public int point = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +30,7 @@ public class flyingenemy : MonoBehaviour
         }
         if(health == 0)
         {
-            Destroy(this.gameObject);
-            coin += 3f;
-            cointext.text = coin + " Coin";
+            Destroy(this.gameObject); 
         }
     }
     IEnumerator movingflatform()

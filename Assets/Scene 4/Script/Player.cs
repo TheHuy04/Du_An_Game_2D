@@ -4,8 +4,9 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player1 : MonoBehaviour
+public class Player : MonoBehaviour
 {
+    public float diem = 0;
     public Rigidbody2D qf;
     public bool jump;
     public Animator ani;
@@ -16,6 +17,7 @@ public class Player1 : MonoBehaviour
     public GameObject arrowprefab;
     public Transform bowpos;
     public float arrowmain = 30f;
+    public Text pointtext;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +60,11 @@ public class Player1 : MonoBehaviour
             arrowmain -= 1f;
             shoot();
         }
+    }
+    public void Addscore(int point)
+    {
+        diem += point;
+        pointtext.text = diem + " Coin";
     }
     public void shoot()
     {
