@@ -33,14 +33,14 @@ public class NewBehaviourScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player3"))
         {
             collision.transform.SetParent(this.transform);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player3"))
         {
             collision.transform.SetParent(null);
         }
