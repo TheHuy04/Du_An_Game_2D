@@ -11,6 +11,11 @@ TagManager:
   - Button
   - exit
   - jump
+  - Ground
+  - Doc
+  - water
+  - Cong
+  - Slime
   layers:
   - Default
   - TransparentFX
