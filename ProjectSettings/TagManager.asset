@@ -4,11 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ground
-  - gate
   - lander
+  - Tilemap
   - enemy
-  - exit
+  - Bullet
+  - Cong
+  - bullet
+  - Ground
+  - Player3
   layers:
   - Default
   - TransparentFX
@@ -16,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Flat_form
   - 
   - 
   - 
