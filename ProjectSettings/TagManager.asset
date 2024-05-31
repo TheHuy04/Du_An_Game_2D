@@ -9,6 +9,9 @@ TagManager:
   - enemy
   - Bullet
   - Cong
+  - bullet
+  - Ground
+  - Player3
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,11 @@ using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
+<<<<<<< HEAD
 public class Player1 : MonoBehaviour
+=======
+public class Player3 : MonoBehaviour
+>>>>>>> main
 {
     public float speed;
     public float jumForce;
