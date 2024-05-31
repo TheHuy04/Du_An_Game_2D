@@ -6,6 +6,7 @@ using UnityEngine;
 public class skeletons : MonoBehaviour
 {
     public float timer = 1f;
+    public float health = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,10 @@ public class skeletons : MonoBehaviour
             transform.Translate(Vector3.right * 3f * Time.deltaTime);
             transform.localScale = new Vector3(1f,1f, 1f);
         }
+        if(health == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
     IEnumerator movingflatform()
     {
@@ -37,6 +42,14 @@ public class skeletons : MonoBehaviour
                 timer += 1;
                 yield return new WaitForSeconds(2.5f);
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet"))
+        {
+            health -= 1;
+            Destroy(collision.gameObject);
         }
     }
 }
