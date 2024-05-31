@@ -1,4 +1,4 @@
-
+﻿
 
 
 using System.Collections;
@@ -61,8 +61,8 @@ public class Player3 : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && Time.time >= nextFiretime)
         {
             Shoot();
-            nextFiretime = Time.time * fireRate;
-        }
+            nextFiretime = Time.time + fireRate;
+        }       
     }
     void Shoot()
     {
@@ -75,6 +75,7 @@ public class Player3 : MonoBehaviour
         {
             Instantiate(arrawPrefab,firePointLeft.position, firePointLeft.rotation);
         }
+
     }
 
     private void Flip()
@@ -85,10 +86,8 @@ public class Player3 : MonoBehaviour
             sp.flipX = !sp.flipX;
         }
         //dao huong mat nv
-        facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        facingRight = !facingRight;   
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
