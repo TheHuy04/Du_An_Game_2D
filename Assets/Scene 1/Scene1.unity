@@ -20242,7 +20242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   _isMovingRight: 1
-  _jumpForce: 6
+  _jumpForce: 7
   _bulletPrefab: {fileID: 5487630579198167573, guid: 8d1d566da49875949be8a2ed7241012e, type: 3}
   _arrow: {fileID: 809198298}
   Climb: 0
