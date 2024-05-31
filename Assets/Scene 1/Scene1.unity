@@ -2224,6 +2224,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dichchuyenden: {fileID: 1222641134}
+--- !u!4 &1247519108 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5619767464253873093, guid: 834d9802cae7ad14fae33d77329a632b, type: 3}
+  m_PrefabInstance: {fileID: 781724567779216154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1392547816
 GameObject:
   m_ObjectHideFlags: 0
@@ -20331,7 +20336,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1247519108}
   m_Father: {fileID: 771769102}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &2142765111
@@ -20819,7 +20825,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2142765110}
     m_Modifications:
     - target: {fileID: 1099091777779247309, guid: 834d9802cae7ad14fae33d77329a632b, type: 3}
       propertyPath: m_Name
@@ -20843,15 +20849,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5619767464253873093, guid: 834d9802cae7ad14fae33d77329a632b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5619767464253873093, guid: 834d9802cae7ad14fae33d77329a632b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5619767464253873093, guid: 834d9802cae7ad14fae33d77329a632b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5619767464253873093, guid: 834d9802cae7ad14fae33d77329a632b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -20876,7 +20882,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 2026707640}
   - {fileID: 771769102}
-  - {fileID: 781724567779216154}
   - {fileID: 1923430888}
   - {fileID: 2141433447}
   - {fileID: 575761808}
