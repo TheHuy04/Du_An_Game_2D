@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class fireslime : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class fireslime : MonoBehaviour
     public Transform fireball;
     public float timers = 1f;
     public float health = 4f;
+    public Text cointext;
+    public float coin;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,8 @@ public class fireslime : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
+            coin += 3f;
+            cointext.text = coin + " Coin";
         }
     }
     IEnumerator timeforshoot()

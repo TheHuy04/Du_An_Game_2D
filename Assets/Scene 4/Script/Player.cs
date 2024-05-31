@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,9 +59,9 @@ public class Player1 : MonoBehaviour
             shoot();
         }
     }
-    public void shoot() 
+    public void shoot()
     {
-        GameObject arr = Instantiate(arrowprefab,bowpos.position, bowpos.rotation);
+        GameObject arr = Instantiate(arrowprefab, bowpos.position, bowpos.rotation);
         Rigidbody2D rb = arr.GetComponent<Rigidbody2D>();
         rb.AddForce(Vector3.right * 50f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
         Destroy(rb.gameObject, 2f);
