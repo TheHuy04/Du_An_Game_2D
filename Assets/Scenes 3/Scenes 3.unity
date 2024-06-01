@@ -40049,7 +40049,7 @@ Transform:
   m_GameObject: {fileID: 1693170197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: -4.2, z: 0}
+  m_LocalPosition: {x: 3.88, y: -4.2, z: 0}
   m_LocalScale: {x: 0.7415, y: 0.7344, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40176,10 +40176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumForce: 5
-  firePointRight: {fileID: 0}
-  firePointLeft: {fileID: 0}
-  arrawPrefab: {fileID: 6046058013612917315, guid: 61938a0c1b99bb1438d33e07040a382d, type: 3}
-  fireRate: 1
 --- !u!95 &1693170204
 Animator:
   serializedVersion: 5
