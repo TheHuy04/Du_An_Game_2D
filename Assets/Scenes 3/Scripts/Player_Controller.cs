@@ -1,4 +1,4 @@
-
+﻿
 
 
 using System.Collections;
@@ -15,7 +15,15 @@ public class Player3 : MonoBehaviour
     private float h_move;
     private bool nhay1L;
     bool Alive = true;
+    public Transform firePointRight;
+    public Transform firePointLeft;
+    public GameObject arrawPrefab;
+    public float fireRate = 1f;
+    private float nextFiretime;
+    private bool facingRight = true;
     private Animator anm;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +48,10 @@ public class Player3 : MonoBehaviour
         if (Alive == false) return;
 
         Flip();
+
+        //arraw      
     }
+
 
     private void Flip()
     {
@@ -49,6 +60,8 @@ public class Player3 : MonoBehaviour
         {
             sp.flipX = !sp.flipX;
         }
+  
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
