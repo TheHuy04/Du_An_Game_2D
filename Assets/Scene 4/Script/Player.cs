@@ -73,7 +73,7 @@ public class Player4 : MonoBehaviour
     {
         GameObject arr = Instantiate(arrowprefab, bowpos.position, bowpos.rotation);
         Rigidbody2D rb = arr.GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector3.right * 50f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
+        rb.AddForce(bowpos.right * 50f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
         Destroy(rb.gameObject, 2f);
     }
     private void OnCollisionEnter2D(Collision2D collision)

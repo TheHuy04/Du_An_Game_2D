@@ -9,11 +9,13 @@ public class musroom : MonoBehaviour
     public float timer = 1f;
     public float health = 5f;
     public int points = 4;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
         rb = GetComponent<Rigidbody2D>();
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -32,11 +34,7 @@ public class musroom : MonoBehaviour
         if (health == 0)
         {
             Destroy(this.gameObject);
-            Player4 kill2 = GameObject.FindWithTag("Player").GetComponent<Player4>();
-            if (kill2 != null)
-            {
-                kill2.addscore(points);
-            }
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()

@@ -7,10 +7,12 @@ public class slime : MonoBehaviour
     public float health = 2f;
     public float timer = 1f;
     public int points = 1;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -29,11 +31,7 @@ public class slime : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            Player4 kill1 = GameObject.FindWithTag("Player").GetComponent<Player4>();
-            if(kill1 != null)
-            {
-                kill1.addscore(points);
-            }
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()

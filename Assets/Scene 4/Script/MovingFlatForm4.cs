@@ -8,10 +8,12 @@ public class skeletons : MonoBehaviour
     public float timer = 1f;
     public float health = 10f;
     public int points = 9;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -30,11 +32,7 @@ public class skeletons : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            Player4 kill3 = GameObject.FindWithTag("Player").GetComponent<Player4>();
-            if(kill3 != null)
-            {
-                kill3.addscore(points);
-            }
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()

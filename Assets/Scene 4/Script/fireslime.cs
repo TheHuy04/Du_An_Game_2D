@@ -10,10 +10,12 @@ public class fireslime : MonoBehaviour
     public float timers = 1f;
     public float health = 5f;
     public int points = 4;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(timeforshoot());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -23,11 +25,7 @@ public class fireslime : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            Player4 kill5 = GameObject.FindWithTag("Player").GetComponent<Player4>();
-            if(kill5 != null)
-            {
-                kill5.addscore(points);
-            }
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator timeforshoot()

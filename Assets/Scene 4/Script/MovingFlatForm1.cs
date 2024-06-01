@@ -8,10 +8,12 @@ public class flyingenemy : MonoBehaviour
     public float health = 4f;
     public float timer = 1f;
     public int points = 3;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -30,11 +32,7 @@ public class flyingenemy : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            Player4 kill = GameObject.FindWithTag("Player").GetComponent<Player4>();
-            if(kill != null)
-            {
-                kill.addscore(points);
-            }
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()
