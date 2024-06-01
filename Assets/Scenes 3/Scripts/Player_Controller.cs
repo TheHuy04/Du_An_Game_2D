@@ -32,8 +32,8 @@ public class Player3 : MonoBehaviour
         //di chuyen
         h_move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
-        anm.SetFloat("isRunning",Mathf.Abs(h_move));
-        anm.SetBool("isJumping",true);
+        anm.SetBool("isRunning", true);
+        anm.SetBool("isJumping", true);
 
         if(Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
