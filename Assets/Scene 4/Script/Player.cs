@@ -19,6 +19,7 @@ public class Player4 : MonoBehaviour
     public GameObject arrowprefab;
     public Transform bowpos;
     public float arrowmain = 30f;
+    public Text arrowtext;
     public Text pointtext;
     // Start is called before the first frame update
     void Start()
@@ -61,6 +62,7 @@ public class Player4 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && arrowmain > 0)
         {
             arrowmain -= 1f;
+            arrowtext.text = "Arrow: " + arrowmain + "/30";
             shoot();
         }
     }
