@@ -36,14 +36,6 @@ public class Player3 : MonoBehaviour
     {
         //di chuyen
         h_move = Input.GetAxis("Horizontal");
-        if(h_move > 0 && !facingRight)
-        {
-            Flip();
-        }
-        else if(h_move < 0 && facingRight)
-        {
-            Flip();
-        }
         rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
         anm.SetFloat("isRunning",Mathf.Abs(h_move));
         anm.SetBool("isJumping",true);
@@ -57,26 +49,9 @@ public class Player3 : MonoBehaviour
 
         Flip();
 
-        //arraw
-        if(Input.GetMouseButtonDown(0) && Time.time >= nextFiretime)
-        {
-            Shoot();
-            nextFiretime = Time.time + fireRate;
-        }       
+        //arraw      
     }
-    void Shoot()
-    {
-        //mui ten theo huong
-        if (facingRight)
-        {
-            Instantiate(arrawPrefab, firePointRight.position, firePointRight.rotation);
-        }
-        else
-        {
-            Instantiate(arrawPrefab,firePointLeft.position, firePointLeft.rotation);
-        }
 
-    }
 
     private void Flip()
     {
@@ -85,8 +60,7 @@ public class Player3 : MonoBehaviour
         {
             sp.flipX = !sp.flipX;
         }
-        //dao huong mat nv
-        facingRight = !facingRight;   
+  
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
