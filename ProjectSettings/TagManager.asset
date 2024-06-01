@@ -12,6 +12,7 @@ TagManager:
   - bullet
   - Ground
   - Player3
+  - Coins
   layers:
   - Default
   - TransparentFX
