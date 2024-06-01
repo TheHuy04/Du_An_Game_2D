@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
+
 public class Player3 : MonoBehaviour
 {
     public float speed;

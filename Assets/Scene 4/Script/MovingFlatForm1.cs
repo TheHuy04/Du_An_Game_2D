@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class flyingenemy : MonoBehaviour
 {
     public float health = 4f;
     public float timer = 1f;
-    public Text cointext;
-    public float coin;
+    public int points = 3;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -32,8 +32,7 @@ public class flyingenemy : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 3f;
-            cointext.text = coin + " Coin";
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()
