@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 
 public class Player3 : MonoBehaviour
@@ -16,14 +18,7 @@ public class Player3 : MonoBehaviour
     private float h_move;
     private bool nhay1L;
     bool Alive = true;
-    public Transform firePointRight;
-    public Transform firePointLeft;
-    public GameObject arrawPrefab;
-    public float fireRate = 1f;
-    private float nextFiretime;
-    private bool facingRight = true;
     private Animator anm;
-
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +33,8 @@ public class Player3 : MonoBehaviour
         //di chuyen
         h_move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
-        anm.SetFloat("isRunning",Mathf.Abs(h_move));
-        anm.SetBool("isJumping",true);
+        anm.SetBool("isRunning", true);
+        anm.SetBool("isJumping", true);
 
         if(Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
@@ -49,10 +44,8 @@ public class Player3 : MonoBehaviour
         if (Alive == false) return;
 
         Flip();
-
         //arraw      
     }
-
 
     private void Flip()
     {
