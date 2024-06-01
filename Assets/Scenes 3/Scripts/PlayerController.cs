@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private int move;
+    private float h_move;
     public float speed;
-    public int Jump;
+    public float Jump;
     private Rigidbody2D rb;
     private Animator anm;
+    private bool nhay1L;
+    private bool isfacingRight = true;
+    bool Alive = true;
 
 
     
@@ -23,19 +26,34 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            move = -1;
-        }
-        else if(Input.GetKey(KeyCode.D))
-        {
-            move = 1;
-        }else move = 0;
-        transform.Translate(Vector3.right * speed * move * Time.deltaTime); 
+        h_move = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
 
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
-            transform.Translate(Vector2.up *Jump * Time.deltaTime);
+            rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
+            nhay1L = false;
+        }
+        if (Alive == false) return;
+        Flip();
+    }
+    void Flip()
+    {
+        if(isfacingRight && h_move < 0 || !isfacingRight && h_move > 0)
+        {
+            isfacingRight = !isfacingRight;
+            Vector3 scale = transform.localScale;
+            scale.x = scale.x * -1;
+            transform.localScale = scale;
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            nhay1L = true;
+        }
+        if (Alive == false) return; 
+    }
+
 }
