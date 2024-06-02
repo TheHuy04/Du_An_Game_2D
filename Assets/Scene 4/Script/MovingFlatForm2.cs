@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class slime : MonoBehaviour
 {
     public float health = 2f;
     public float timer = 1f;
-    public float coin;
-    public Text cointext;
+    public int points = 1;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -31,8 +31,7 @@ public class slime : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 1f;
-            cointext.text = coin + " Coin";
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()
