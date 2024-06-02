@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -19,7 +20,12 @@ public class PlayerController : MonoBehaviour
     public float fireRate = 0.5f;
     private float nextFireTime;
 
-
+    public float dashSpeed = 20f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+    private bool isDashing;
+    private float dashTime;
+    private float dashCooldownTime;
 
 
     // Start is called before the first frame update
@@ -32,11 +38,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         h_move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
-        anm.SetFloat("isRunning",Mathf.Abs(h_move)); 
+        anm.SetFloat("isRunning", Mathf.Abs(h_move));
 
-        if(Input.GetKeyDown(KeyCode.Space) && nhay1L)
+
+        if (Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
             rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
             nhay1L = false;
@@ -48,14 +56,28 @@ public class PlayerController : MonoBehaviour
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
-            anm.SetTrigger("Attack");
+        }
+        if (isDashing)
+        {
+            if (Time.time >= dashTime)
+            {
+                isDashing = false;
+                rb.velocity = new Vector2(0, rb.velocity.y); // Dừng lại khi dash kết thúc
+            }
             return;
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= dashCooldownTime)
+        {
+            Dash();
+        }
+
     }
     void Shoot()
     {
+        anm.SetTrigger("Attack");
+
         GameObject arrow = Instantiate(arrowPrefab, arrowSpawnPoint.position, arrowSpawnPoint.rotation);
-        Rigidbody2D rbArrow =arrow.GetComponent<Rigidbody2D>();
+        Rigidbody2D rbArrow = arrow.GetComponent<Rigidbody2D>();
         if (isfacingRight)
         {
             rbArrow.velocity = new Vector2(arrowSpeed, 0);
@@ -68,7 +90,7 @@ public class PlayerController : MonoBehaviour
     }
     void Flip()
     {
-        if(isfacingRight && h_move < 0 || !isfacingRight && h_move > 0)
+        if (isfacingRight && h_move < 0 || !isfacingRight && h_move > 0)
         {
             isfacingRight = !isfacingRight;
             Vector3 scale = transform.localScale;
@@ -84,8 +106,23 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            anm.SetBool("isJumping",false);
+            anm.SetBool("isJumping", false);
         }
     }
+    private void Dash()
+    {
+        isDashing = true;
+        dashTime = Time.time + dashDuration;
+        dashCooldownTime = Time.time + dashCooldown;
 
+        float dashDirection = isfacingRight ? 1 : -1;
+        rb.velocity = new Vector2(dashDirection * dashSpeed, 0); // Đặt vận tốc dash
+
+        // Kích hoạt animation dash
+        anm.SetTrigger("Dash");
+
+        // Gỡ lỗi
+        Debug.Log(rb.velocity.x);
+    }
+  
 }
