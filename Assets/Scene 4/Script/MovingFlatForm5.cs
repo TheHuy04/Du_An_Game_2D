@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class goblin : MonoBehaviour
 {
     public float timer = 1f;
-    public float health = 2f;
-    public Text cointext;
-    public float coin;
+    public float health = 4f;
+    public int points = 3;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -32,8 +32,7 @@ public class goblin : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 1f;
-            cointext.text = coin + " Coin";
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()

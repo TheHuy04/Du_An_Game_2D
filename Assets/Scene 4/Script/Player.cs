@@ -1,11 +1,14 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Player1 : MonoBehaviour
+public class Player4 : MonoBehaviour
 {
+    public float diem = 0;
     public Rigidbody2D qf;
     public bool jump;
     public Animator ani;
@@ -16,11 +19,14 @@ public class Player1 : MonoBehaviour
     public GameObject arrowprefab;
     public Transform bowpos;
     public float arrowmain = 30f;
+    public Text arrowtext;
+    public Text pointtext;
     // Start is called before the first frame update
     void Start()
     {
         qf = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -56,14 +62,20 @@ public class Player1 : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && arrowmain > 0)
         {
             arrowmain -= 1f;
+            arrowtext.text = "Arrow: " + arrowmain + "/30";
             shoot();
         }
+    }
+    public void addscore(int points)
+    {
+        diem += points;
+        pointtext.text = points + " Coin";
     }
     public void shoot()
     {
         GameObject arr = Instantiate(arrowprefab, bowpos.position, bowpos.rotation);
         Rigidbody2D rb = arr.GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector3.right * 50f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
+        rb.AddForce(bowpos.right * 50f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
         Destroy(rb.gameObject, 2f);
     }
     private void OnCollisionEnter2D(Collision2D collision)

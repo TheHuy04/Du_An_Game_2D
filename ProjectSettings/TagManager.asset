@@ -3,6 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - lander
   - Tilemap
@@ -16,6 +17,9 @@ TagManager:
   - water
   - MuiTen3
   - Monster3
+=======
+  tags: []
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
@@ -23,7 +27,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Flat_form
+  - 
   - 
   - 
   - 
@@ -52,7 +56,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: muiTen
-    uniqueID: 2103120983
     locked: 0
