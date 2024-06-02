@@ -40,14 +40,16 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
             nhay1L = false;
+
         }
+
         Flip();
         if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
         {
             Shoot();
             nextFireTime = Time.time + fireRate;
-            
-            
+            anm.SetTrigger("Attack");
+            return;
         }
     }
     void Shoot()
