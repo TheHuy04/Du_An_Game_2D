@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 619a78f1f85be9e31e21adc0e675fc96835024c5
   tags:
   - lander
   - Tilemap
@@ -17,7 +21,13 @@ TagManager:
   - water
   - MuiTen3
   - Monster3
+<<<<<<< HEAD
+=======
   tags: []
+>>>>>>> main
+=======
+  tags: []
+>>>>>>> 619a78f1f85be9e31e21adc0e675fc96835024c5
   layers:
   - Default
   - TransparentFX
