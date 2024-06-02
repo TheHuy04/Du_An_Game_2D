@@ -216,7 +216,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -292,7 +292,8 @@ Transform:
   m_LocalPosition: {x: 5.1488423, y: -4.295589, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 852401784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &36577064
@@ -308,7 +309,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Jump: 3
+  Jump: 8
+  arrowPrefab: {fileID: 2187145873804593962, guid: 493c769cf00264945b575570aefe4f19, type: 3}
+  arrowSpawnPoint: {fileID: 852401784}
+  arrowSpeed: 10
+  fireRate: 0.5
 --- !u!61 &36577065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39337,6 +39342,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &852401783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852401784}
+  m_Layer: 0
+  m_Name: arrowPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852401784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852401783}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.553, y: -0.253, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 36577063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &883164598
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39512,7 +39548,7 @@ GameObject:
   - component: {fileID: 999198345}
   m_Layer: 0
   m_Name: Goblin3
-  m_TagString: Untagged
+  m_TagString: Monster3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39618,7 +39654,7 @@ GameObject:
   - component: {fileID: 1152002444}
   m_Layer: 0
   m_Name: Nam3
-  m_TagString: Untagged
+  m_TagString: Monster3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39898,7 +39934,7 @@ GameObject:
   - component: {fileID: 1294296500}
   m_Layer: 0
   m_Name: Chim3
-  m_TagString: Untagged
+  m_TagString: Monster3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40134,7 +40170,7 @@ GameObject:
   - component: {fileID: 1592244621}
   m_Layer: 0
   m_Name: Xuong3
-  m_TagString: Untagged
+  m_TagString: Monster3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3,6 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+
+  tags:
+  - lander
+  - Tilemap
+  - enemy
+  - Bullet
+  - Cong
+  - bullet
+  - Ground
+  - Player3
+  - Slime
+  - water
+  - MuiTen3
+  - Monster3
   tags: []
   layers:
   - Default
