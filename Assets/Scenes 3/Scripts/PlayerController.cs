@@ -27,6 +27,8 @@ public class PlayerController : MonoBehaviour
     private float dashTime;
     private float dashCooldownTime;
 
+    public float LMHT;
+    public float LMTD = 5f;
 
     // Start is called before the first frame update
     void Start()

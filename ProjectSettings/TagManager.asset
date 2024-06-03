@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Player3
+  - Slime
+  - Ground
+  - Monster3
+  - water
+  - Cong
   layers:
   - Default
   - TransparentFX
@@ -40,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Canvas
+    uniqueID: 2653998155
     locked: 0
