@@ -55,6 +55,5 @@ public class PlayerHealth : MonoBehaviour
     public void Death()
     {
         Destroy(gameObject);
-        anm.SetTrigger("Die");
     }
 }
