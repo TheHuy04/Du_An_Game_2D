@@ -1,4 +1,4 @@
-
+﻿
 
 
 using System.Collections;
@@ -6,6 +6,9 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
+
 
 public class Player3 : MonoBehaviour
 {
@@ -16,6 +19,7 @@ public class Player3 : MonoBehaviour
     private bool nhay1L;
     bool Alive = true;
     private Animator anm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +33,8 @@ public class Player3 : MonoBehaviour
         //di chuyen
         h_move = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(h_move * speed, rb.velocity.y);
-        anm.SetFloat("isRunning",Mathf.Abs(h_move));
-        anm.SetBool("isJumping",true);
+        anm.SetBool("isRunning", true);
+        anm.SetBool("isJumping", true);
 
         if(Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
@@ -40,6 +44,7 @@ public class Player3 : MonoBehaviour
         if (Alive == false) return;
 
         Flip();
+        //arraw      
     }
 
     private void Flip()
@@ -49,6 +54,8 @@ public class Player3 : MonoBehaviour
         {
             sp.flipX = !sp.flipX;
         }
+  
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class skeletons : MonoBehaviour
 {
     public float timer = 1f;
     public float health = 10f;
-    public Text cointext;
-    public float coin;
+    public int points = 9;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -32,8 +32,7 @@ public class skeletons : MonoBehaviour
         if(health == 0)
         {
             Destroy(this.gameObject);
-            coin += 9f;
-            cointext.text = coin + " Coin";
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()
