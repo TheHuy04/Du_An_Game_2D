@@ -27,8 +27,6 @@ public class PlayerController : MonoBehaviour
     private float dashTime;
     private float dashCooldownTime;
 
-    public float LMHT;
-    public float LMTD = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -125,6 +123,11 @@ public class PlayerController : MonoBehaviour
 
         // Gỡ lỗi
         Debug.Log(rb.velocity.x);
+    }
+    void Die()
+    {
+        anm.SetTrigger("Die");
+        FindObjectOfType<PlayerHealth>().Death();
     }
   
 }

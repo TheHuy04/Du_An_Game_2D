@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Data;
 
 public class HP : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public Image hp;
-    public void CapNhatHP(float HPHT, float LMTD)//luong mau hien tai && luog mau  toi da
+    public Image fillBar;
+    public TextMeshProUGUI valueTest;
+
+    //cap nhat mau khi thay doi
+    public void UpdateBar(int currentValue, int maxValue)
     {
-        hp.fillAmount = HPHT/LMTD;
+        fillBar.fillAmount = (float)currentValue / (float)maxValue;
+        valueTest.text = currentValue.ToString() + " / " + maxValue.ToString();
     }
 }
