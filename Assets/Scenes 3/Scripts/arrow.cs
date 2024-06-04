@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class arrow : MonoBehaviour
 {
-    public float lifeTime = 2f;
+    public float lifeTime = 0.5f;
     private Rigidbody2D rb;
 
 
