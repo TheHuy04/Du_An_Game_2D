@@ -13,6 +13,9 @@ TagManager:
   - Ground
   - Player3
   - Coins
+  - Monster3
+  - water
+  - Portal
   layers:
   - Default
   - TransparentFX
@@ -49,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: canvas
+    uniqueID: 266066659
     locked: 0
