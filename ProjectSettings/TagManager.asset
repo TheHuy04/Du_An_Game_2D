@@ -6,8 +6,13 @@ TagManager:
   tags:
   - lander
   - Tilemap
+  - enemy
   - Bullet
-  - Portal
+  - Cong
+  - bullet
+  - Ground
+  - Player3
+  - Coins
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Flat_form
   - 
   - 
   - 
