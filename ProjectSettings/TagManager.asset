@@ -3,31 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 619a78f1f85be9e31e21adc0e675fc96835024c5
   tags:
-  - lander
-  - Tilemap
-  - enemy
-  - Bullet
-  - Cong
-  - bullet
-  - Ground
   - Player3
   - Slime
-  - water
-  - MuiTen3
+  - Ground
   - Monster3
-<<<<<<< HEAD
-=======
-  tags: []
->>>>>>> main
-=======
-  tags: []
->>>>>>> 619a78f1f85be9e31e21adc0e675fc96835024c5
+  - water
+  - Cong
   layers:
   - Default
   - TransparentFX
@@ -64,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Canvas
+    uniqueID: 2653998155
     locked: 0
