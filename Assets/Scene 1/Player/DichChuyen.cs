@@ -21,14 +21,14 @@ public class DichChuyen : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Cong"))
+        if (collision.CompareTag("Portal"))
         {
             Cong = collision.gameObject;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Cong"))
+        if (collision.CompareTag("Portal"))
         {
             Cong = null;
         }

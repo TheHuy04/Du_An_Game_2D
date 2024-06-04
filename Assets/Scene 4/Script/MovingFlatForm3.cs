@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class musroom : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float timer = 1f;
     public float health = 5f;
-    public Text cointext;
-    public float coin;
+    public int points = 4;
+    public ScoreKeeper scorekeeper;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(movingflatform());
         rb = GetComponent<Rigidbody2D>();
+        scorekeeper = FindObjectOfType<ScoreKeeper>();
     }
 
     // Update is called once per frame
@@ -34,8 +34,7 @@ public class musroom : MonoBehaviour
         if (health == 0)
         {
             Destroy(this.gameObject);
-            coin += 4f;
-            cointext.text = coin + " Coin";
+            scorekeeper.tangdiem(points);
         }
     }
     IEnumerator movingflatform()
