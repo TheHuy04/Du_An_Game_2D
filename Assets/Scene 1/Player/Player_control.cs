@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player_control : MonoBehaviour
@@ -21,6 +23,14 @@ public class Player_control : MonoBehaviour
 
     public bool Climb;
 
+    public TextMeshProUGUI _CoinText;
+    private int _coins = 0;
+
+    public TextMeshProUGUI _LivesText;
+    private static  int _Lives = 3;
+
+    public GameObject _GameOverPanel;
+
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
     // Start is called before the first frame update
@@ -29,6 +39,8 @@ public class Player_control : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
+        _CoinText.text = _coins.ToString();
+        _LivesText.text = _Lives.ToString();
     }
 
     // Update is called once per frame
@@ -117,6 +129,25 @@ public class Player_control : MonoBehaviour
             _rigidbody2D.gravityScale = 0;
             Climb = true;
             _animator.SetBool("Is_land", true);
+        }
+        else if (collision.CompareTag("enemy"))
+        {
+            _Lives -= 1;
+            if (_Lives > 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            else
+            {
+                _GameOverPanel.SetActive(true);
+                Time.timeScale = 0;
+            }
+        }
+        else if (collision.CompareTag("Coins"))
+        {
+            Destroy(collision.gameObject);
+            _coins += collision.gameObject.GetComponent<Coins>().coinvaule;
+            _CoinText.text = _coins.ToString();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
