@@ -8,11 +8,13 @@ TagManager:
   - Tilemap
   - Bullet
   - Portal
+  - Cong
+  - enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Plat_form
   - Water
   - UI
   - 
