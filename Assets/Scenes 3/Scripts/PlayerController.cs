@@ -124,10 +124,4 @@ public class PlayerController : MonoBehaviour
         // Gỡ lỗi
         Debug.Log(rb.velocity.x);
     }
-    void Die()
-    {
-        anm.SetTrigger("Die");
-        FindObjectOfType<PlayerHealth>().Death();
-    }
-  
 }
