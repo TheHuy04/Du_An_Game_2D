@@ -32,21 +32,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.UpdateBar(currentHealth, maxHealth);
         UpdateScoreText(); // Cập nhật điểm số ban đầu
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamage(1);
-        }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Monster3"))
-        {
-            GetComponent<PlayerHealth>().TakeDamage(1);
-        }
-    }
     //bi danh se ntn
     public void TakeDamage(int damage)
     {
