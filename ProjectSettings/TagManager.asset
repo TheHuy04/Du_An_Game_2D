@@ -4,12 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - lander
-  - Tilemap
-  - Bullet
-  - Portal
-=======
   - Gate
   - Enemy
   - ground
@@ -19,7 +13,6 @@ TagManager:
   - exit
   - jump
   - bullet
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

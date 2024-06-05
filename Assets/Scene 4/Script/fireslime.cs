@@ -33,7 +33,7 @@ public class fireslime : MonoBehaviour
         while (timers == 1)
         {
             timers -= 1;
-            yield return new WaitForSeconds(0.005f);
+            yield return new WaitForSeconds(0.0005f);
             while (timers == 0)
             {
                 timers += 1;
