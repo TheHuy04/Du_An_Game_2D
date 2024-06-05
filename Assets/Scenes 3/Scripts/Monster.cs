@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -37,7 +37,7 @@ public class Monster : MonoBehaviour
         anm.SetTrigger("TakeHit");
         if(currentHealth <= 0)
         {
-            anm.SetTrigger("Die");
+            
             Die();
         }
     }
@@ -89,7 +89,6 @@ public class Monster : MonoBehaviour
         anm.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
-       
     }
     private void OnDrawGizmosSelected()
     {

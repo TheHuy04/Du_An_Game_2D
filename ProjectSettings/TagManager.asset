@@ -16,6 +16,7 @@ TagManager:
   - Monster3
   - water
   - Portal
+  - Coin3
   layers:
   - Default
   - TransparentFX

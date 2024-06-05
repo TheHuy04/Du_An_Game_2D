@@ -10,11 +10,15 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int maxHealth;
     int currentHealth; //mau hien tai
     public HP healthBar;
+    private Rigidbody2D rb;
+    
 
     public UnityEvent OnDeath;
 
     private int score = 0;
     public TextMeshProUGUI ScoreText;
+
+
 
     private void OnEnable()
     {
@@ -27,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        
         anm = GetComponent<Animator>(); // Lấy thành phần Animator
         currentHealth = maxHealth;
         healthBar.UpdateBar(currentHealth, maxHealth);
@@ -46,6 +51,8 @@ public class PlayerHealth : MonoBehaviour
     }
     public void Death()
     {
+        
+
         anm.SetTrigger("Die");
         StartCoroutine(WaitForAnimation());
     }
@@ -64,7 +71,24 @@ public class PlayerHealth : MonoBehaviour
     {
         if (ScoreText != null)
         {
-            ScoreText.text = "Score: " + score;
+            ScoreText.text = " " + score;
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin3"))
+        {
+            CollectCoin(other.gameObject);
+        }
+    }
+
+    // Hàm này xử lý việc nhận dạng và xử lý đồng xu
+    private void CollectCoin(GameObject coin)
+    {
+        Destroy(coin); // Hủy đồng xu sau khi nhặt
+        AddScore(1); // Tăng điểm số
+    }
+ 
+
+
 }
