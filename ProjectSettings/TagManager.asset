@@ -6,7 +6,15 @@ TagManager:
   tags:
   - lander
   - Tilemap
+  - enemy
   - Bullet
+  - Cong
+  - bullet
+  - Ground
+  - Player3
+  - Coins
+  - Monster3
+  - water
   - Portal
   - Cong
   - enemy
@@ -17,7 +25,7 @@ TagManager:
   - Plat_form
   - Water
   - UI
-  - 
+  - Flat_form
   - 
   - 
   - 
@@ -46,4 +54,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: canvas
+    uniqueID: 266066659
     locked: 0
