@@ -16,11 +16,13 @@ TagManager:
   - Monster3
   - water
   - Portal
+  - Cong
+  - enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Plat_form
   - Water
   - UI
   - Flat_form
