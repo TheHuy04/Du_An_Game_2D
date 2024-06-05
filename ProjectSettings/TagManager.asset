@@ -16,10 +16,19 @@ TagManager:
   - Monster3
   - water
   - Portal
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - Coin3
+=======
+  - Cong
+  - enemy
+>>>>>>> main
+=======
 
   - Coin3
   - Cong
   - enemy
+>>>>>>> 45371f1ba197e73ff2ee9e1cc89e2ccbc126fb5d
   layers:
   - Default
   - TransparentFX
