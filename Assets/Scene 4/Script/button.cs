@@ -22,12 +22,20 @@ public class button : MonoBehaviour
             ani.SetBool("click", true);
             Destroy(gate);
         }
+        else ani.SetBool("click", false);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             Click = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Click = false;
         }
     }
 }

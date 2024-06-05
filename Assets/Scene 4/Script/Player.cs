@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class Player4 : MonoBehaviour
 {
+    public GameObject die;
     public float diem = 0;
     public Rigidbody2D qf;
     public bool jump;
@@ -52,6 +53,7 @@ public class Player4 : MonoBehaviour
         if (mang < 1)
         {
             Destroy(this.gameObject);
+            die.SetActive(true);
         }
         if (climbing)
         {
