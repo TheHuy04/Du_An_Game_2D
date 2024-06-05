@@ -8,26 +8,20 @@ using UnityEngine.UI;
 
 public class Player4 : MonoBehaviour
 {
-    public GameObject die;
-    public float diem = 0;
+    public GameObject die, pause, arrowprefab;
+    public float diem = 0, arrowmain = 30f;
     public Rigidbody2D qf;
-    public bool jump;
+    public bool jump, climbing;
     public Animator ani;
     public int mang = 3;
-    public Text lifetext;
-    public Transform checkpoint;
-    public bool climbing;
-    public GameObject arrowprefab;
-    public Transform bowpos;
-    public float arrowmain = 30f;
-    public Text arrowtext;
-    public Text pointtext;
+    public Text lifetext, arrowtext, pointtext;
+    public Transform checkpoint, bowpos;
     // Start is called before the first frame update
     void Start()
     {
         qf = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
-
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -63,9 +57,16 @@ public class Player4 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && arrowmain > 0)
         {
+            ani.SetBool("shoot",true);
             arrowmain -= 1f;
             arrowtext.text = "Arrow: " + arrowmain + "/30";
             shoot();
+        }
+        else ani.SetBool("shoot",false);
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Time.timeScale = 0f;
+            pause.SetActive(true);
         }
     }
     public void addscore(int points)
