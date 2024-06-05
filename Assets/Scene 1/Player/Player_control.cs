@@ -29,6 +29,8 @@ public class Player_control : MonoBehaviour
     public TextMeshProUGUI _LivesText;
     private static  int _Lives = 3;
 
+    public Transform checkPoint;
+
     public GameObject _GameOverPanel;
 
     private BoxCollider2D _boxCollider2D;
@@ -40,7 +42,7 @@ public class Player_control : MonoBehaviour
         _animator = GetComponent<Animator>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _CoinText.text = _coins.ToString();
-        _LivesText.text = _Lives.ToString();
+        
     }
 
     // Update is called once per frame
@@ -54,6 +56,12 @@ public class Player_control : MonoBehaviour
             var lenThang = Input.GetAxisRaw("Horizontal");
             var lenThang2 = Input.GetAxisRaw("Vertical");
             _rigidbody2D.velocity = new Vector3 (lenThang *1f, lenThang2 *3f, 0f);
+        }
+
+        if(_Lives == 0)
+        {
+            Destroy(this.gameObject);
+            _GameOverPanel.SetActive(true);
         }
     }
     private void Move()
@@ -133,15 +141,8 @@ public class Player_control : MonoBehaviour
         else if (collision.CompareTag("enemy"))
         {
             _Lives -= 1;
-            if (_Lives > 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-            else
-            {
-                _GameOverPanel.SetActive(true);
-                Time.timeScale = 0;
-            }
+            _LivesText.text = "Lives X " + _Lives;
+            transform.position = checkPoint.position;
         }
         else if (collision.CompareTag("Coins"))
         {
