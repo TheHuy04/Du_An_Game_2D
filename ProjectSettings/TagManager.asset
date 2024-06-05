@@ -16,6 +16,8 @@ TagManager:
   - Monster3
   - water
   - Portal
+
+  - Coin3
   - Cong
   - enemy
   layers:
@@ -26,8 +28,8 @@ TagManager:
   - Water
   - UI
   - Flat_form
-  - 
-  - 
+  - monster
+  - player
   - 
   - 
   - 

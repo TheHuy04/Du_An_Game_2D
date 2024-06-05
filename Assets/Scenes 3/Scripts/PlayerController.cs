@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
         anm.SetFloat("isRunning", Mathf.Abs(h_move));
 
 
+
         if (Input.GetKeyDown(KeyCode.Space) && nhay1L)
         {
             rb.AddForce(Vector2.up * Jump, ForceMode2D.Impulse);
