@@ -4,12 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
+
   - lander
   - Tilemap
+  - enemy
   - Bullet
+  - Cong
+  - bullet
+  - Ground
+  - Player3
+  - Coins
+  - Monster3
+  - water
   - Portal
-=======
   - Gate
   - Enemy
   - ground
@@ -19,15 +26,16 @@ TagManager:
   - exit
   - jump
   - bullet
->>>>>>> Stashed changes
+  - Cong
+  - enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Plat_form
   - Water
   - UI
-  - 
+  - Flat_form
   - 
   - 
   - 
@@ -56,4 +64,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: canvas
+    uniqueID: 266066659
     locked: 0
