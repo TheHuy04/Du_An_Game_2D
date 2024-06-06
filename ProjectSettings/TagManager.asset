@@ -4,18 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Bullet
+  - lander
+  - Cong
   - enemy
   - Coins
-  - Monster3
-  - Ground
-  - Player3
-  - water
-  - Coin3
-  - Cong
-  - Trap3
-  - Water
-  - Audio3
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -23,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - player
-  - monster
+  - Flat_form
+  - 
   - 
   - 
   - 
@@ -52,7 +45,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: canvas
-    uniqueID: 696353083
     locked: 0
