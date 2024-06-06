@@ -40429,7 +40429,7 @@ Transform:
   m_GameObject: {fileID: 480472514}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.7, y: -15.7, z: -10}
+  m_LocalPosition: {x: 2.43, y: -3.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42154,7 +42154,7 @@ Transform:
   m_GameObject: {fileID: 789339050}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.7, y: -15.7, z: -10}
+  m_LocalPosition: {x: 2.43, y: -3.68, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43163,7 +43163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129765512}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: attackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -43543,7 +43543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233765359}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43807,7 +43807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.6
+      value: 40.79
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -44092,10 +44092,10 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 696353083
+  m_SortingLayerID: -1556779175
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1400777448
@@ -44389,7 +44389,7 @@ GameObject:
   - component: {fileID: 1460100938}
   - component: {fileID: 1460100937}
   - component: {fileID: 1460100936}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Player 3
   m_TagString: Player3
   m_Icon: {fileID: 0}
@@ -44540,7 +44540,7 @@ Transform:
   m_GameObject: {fileID: 1460100935}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.7, y: -15.7, z: 0}
+  m_LocalPosition: {x: 2.43, y: -3.68, z: 0}
   m_LocalScale: {x: 0.9906, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
