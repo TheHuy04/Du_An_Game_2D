@@ -14,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
-    private AudioManager audioManager;
 
     // Start is called before the first frame update
 
@@ -26,7 +25,6 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.L))
             {
-                audioManager.PlaySFX(audioManager.attackClip);
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
@@ -54,8 +52,5 @@ public class PlayerAttack : MonoBehaviour
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Player3").GetComponent<AudioManager>();
-    }
+
 }
