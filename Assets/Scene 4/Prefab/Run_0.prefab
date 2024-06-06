@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4069781485013992240}
   m_Layer: 0
   m_Name: Run_0
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,3 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   timer: 1
+  health: 5
+  points: 4
+  scorekeeper: {fileID: 0}
