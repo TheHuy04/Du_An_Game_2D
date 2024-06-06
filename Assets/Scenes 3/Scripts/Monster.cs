@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class Monster : MonoBehaviour
     private Vector2 patrolCenter;
     private Vector2 patrolTarget;
     private bool movingRight = true;
+
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -78,6 +81,7 @@ public class Monster : MonoBehaviour
     }
     void Attack(PlayerHealth playerHealth)
     {
+        audioManager.PlaySFX(audioManager.attackClip);
         if (playerHealth != null)
         {
             anm.SetTrigger("Attack");
@@ -95,6 +99,10 @@ public class Monster : MonoBehaviour
         if (attackPoint == null) return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio3").GetComponent<AudioManager>();
     }
 
 
