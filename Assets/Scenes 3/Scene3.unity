@@ -188,9 +188,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -455,9 +467,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
       value: Nam3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -498,6 +518,10 @@ PrefabInstance:
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570354605799786972, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1101,9 +1125,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1327,9 +1363,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40313,9 +40361,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40631,9 +40691,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: maxHeath
@@ -40650,6 +40718,10 @@ PrefabInstance:
     - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: patrolRange
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41748,9 +41820,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42373,9 +42457,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42934,9 +43030,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43048,9 +43156,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43163,7 +43283,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129765512}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: attackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -43278,9 +43398,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43543,7 +43675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233765359}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43573,9 +43705,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43687,9 +43831,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
       value: Nam3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43730,6 +43882,10 @@ PrefabInstance:
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570354605799786972, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43801,9 +43957,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
       value: Nam3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43844,6 +44008,10 @@ PrefabInstance:
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570354605799786972, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44141,9 +44309,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44389,7 +44569,7 @@ GameObject:
   - component: {fileID: 1460100938}
   - component: {fileID: 1460100937}
   - component: {fileID: 1460100936}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Player 3
   m_TagString: Player3
   m_Icon: {fileID: 0}
@@ -44596,7 +44776,7 @@ MonoBehaviour:
   attackRange: 0.5
   MonsterLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   attackDamage: 1
   attackRate: 2
 --- !u!114 &1460100944
@@ -45167,9 +45347,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
       value: Nam3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45210,6 +45398,10 @@ PrefabInstance:
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570354605799786972, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -45875,9 +46067,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46478,9 +46682,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46620,9 +46836,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
       value: Nam3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46663,6 +46887,10 @@ PrefabInstance:
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570354605799786972, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51261,9 +51489,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3266294713743658483, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_Name
       value: Goblin3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733791918823760882, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51318,9 +51558,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4397901008972806149, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_Name
       value: Xuong3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437924114275699693, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51436,9 +51688,17 @@ PrefabInstance:
       propertyPath: patrolRange
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
       value: Nam3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51479,6 +51739,10 @@ PrefabInstance:
     - target: {fileID: 3581497411285996677, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570354605799786972, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
