@@ -14,8 +14,9 @@ public class PlayerAttack : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+
     // Start is called before the first frame update
- 
+
 
     // Update is called once per frame
     void Update()
@@ -34,8 +35,7 @@ public class PlayerAttack : MonoBehaviour
     {
         anm.SetTrigger("Attack");
         Collider2D[] hitMonster = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, MonsterLayers);
-
-        foreach(Collider2D monsterr in hitMonster)
+        foreach (Collider2D monsterr in hitMonster)
         {
             MonsterHealth monsterHealth = monsterr.GetComponent<MonsterHealth>();
             if (monsterHealth != null)
@@ -52,4 +52,5 @@ public class PlayerAttack : MonoBehaviour
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
 }
