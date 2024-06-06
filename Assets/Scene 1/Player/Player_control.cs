@@ -35,6 +35,8 @@ public class Player_control : MonoBehaviour
 
     private BoxCollider2D _boxCollider2D;
     private Animator _animator;
+
+    public GameObject pause;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,7 @@ public class Player_control : MonoBehaviour
         _animator = GetComponent<Animator>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _CoinText.text = _coins.ToString();
-        
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -62,6 +64,11 @@ public class Player_control : MonoBehaviour
         {
             Destroy(this.gameObject);
             _GameOverPanel.SetActive(true);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0f;
+            pause.SetActive(true);
         }
     }
     private void Move()
