@@ -9,6 +9,13 @@ TagManager:
   - enemy
   - Coins
   - Bullet
+  - Ground
+  - Player3
+  - Audio3
+  - Water
+  - Monster3
+  - Coin3
+  - Trap3
   layers:
   - Default
   - TransparentFX
@@ -17,8 +24,8 @@ TagManager:
   - Water
   - UI
   - Flat_form
-  - 
-  - 
+  - pl
+  - ms
   - 
   - 
   - 
@@ -45,4 +52,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HP
+    uniqueID: 2738188121
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 3309571625
+    locked: 0
+  - name: 3
+    uniqueID: 774799321
     locked: 0
