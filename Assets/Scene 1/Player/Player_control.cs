@@ -27,7 +27,7 @@ public class Player_control : MonoBehaviour
     private int _coins = 0;
 
     public TextMeshProUGUI _LivesText;
-    private static  int _Lives = 3;
+    private static  int _Lives;
 
     public Transform checkPoint;
 
@@ -40,6 +40,7 @@ public class Player_control : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _Lives = 3;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
