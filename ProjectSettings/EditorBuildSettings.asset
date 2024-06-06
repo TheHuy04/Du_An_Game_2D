@@ -5,13 +5,23 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> 4775c7a21fcb305d2b57f8b77ccd27c168aa4327
   - enabled: 1
     path: Assets/Scenes 3/Scene3.unity
     guid: 9ed2f3fc3f294df4e8245220974cf436
   - enabled: 1
+<<<<<<< HEAD
+=======
+  - enabled: 0
+>>>>>>> main
+=======
 
   - enabled: 0
+>>>>>>> 4775c7a21fcb305d2b57f8b77ccd27c168aa4327
     path: Assets/Scene 4/Scene4_HuyTran.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
