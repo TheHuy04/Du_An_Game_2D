@@ -9756,8 +9756,8 @@ Tilemap:
   - first: {x: -4, y: -18, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9776,8 +9776,8 @@ Tilemap:
   - first: {x: -2, y: -18, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -38097,7 +38097,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 1930
     m_Data: {fileID: 11400000, guid: c2a7ae16a1a70ba43a31259fe02c1c61, type: 2}
-  - m_RefCount: 250
+  - m_RefCount: 252
     m_Data: {fileID: 11400000, guid: add3b3de49d90984ea0ba7a3fac753f6, type: 2}
   - m_RefCount: 36
     m_Data: {fileID: 11400000, guid: 0e25be21a39e2974991f87de727599ba, type: 2}
@@ -38117,7 +38117,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 20aa5e17c020c4f4593b838019f7e45f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d3b69d4582320044aa3ce0ec2e58fca9, type: 2}
-  - m_RefCount: 218
+  - m_RefCount: 216
     m_Data: {fileID: 11400000, guid: a0cb83d3f37008b4dbe9c83864dfada1, type: 2}
   - m_RefCount: 153
     m_Data: {fileID: 11400000, guid: 3981bb6245888f54fb55b843cbe213a9, type: 2}
@@ -38146,7 +38146,7 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 1930
     m_Data: {fileID: -1684534085, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
-  - m_RefCount: 250
+  - m_RefCount: 252
     m_Data: {fileID: -344270948, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
   - m_RefCount: 36
     m_Data: {fileID: -449509399, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
@@ -38166,7 +38166,7 @@ Tilemap:
     m_Data: {fileID: -756131536, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
   - m_RefCount: 14
     m_Data: {fileID: -851563058, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
-  - m_RefCount: 218
+  - m_RefCount: 216
     m_Data: {fileID: -503256511, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
   - m_RefCount: 153
     m_Data: {fileID: 816182794, guid: 31896531e9b0ef5409fa3d09d04c0800, type: 3}
@@ -44918,7 +44918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d2f484b2e974b48befc248f5e85dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 20
   healthBar: {fileID: 242188793}
   OnDeath:
     m_PersistentCalls:
