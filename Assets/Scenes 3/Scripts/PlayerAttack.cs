@@ -14,8 +14,10 @@ public class PlayerAttack : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
 
+    private AudioManager audioManager;
+
     // Start is called before the first frame update
- 
+
 
     // Update is called once per frame
     void Update()
@@ -24,6 +26,7 @@ public class PlayerAttack : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.L))
             {
+                audioManager.PlaySFX(audioManager.attackClip);
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
@@ -34,8 +37,7 @@ public class PlayerAttack : MonoBehaviour
     {
         anm.SetTrigger("Attack");
         Collider2D[] hitMonster = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, MonsterLayers);
-
-        foreach(Collider2D monsterr in hitMonster)
+        foreach (Collider2D monsterr in hitMonster)
         {
             MonsterHealth monsterHealth = monsterr.GetComponent<MonsterHealth>();
             if (monsterHealth != null)
@@ -51,5 +53,9 @@ public class PlayerAttack : MonoBehaviour
             return; 
         }
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Player3").GetComponent<AudioManager>();
     }
 }
