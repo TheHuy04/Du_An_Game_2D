@@ -15,11 +15,14 @@ TagManager:
   - enemy
   - seller
   - wall
+  - Bullet
+  - Coins
+  - lander
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Flat_form
   - Water
   - UI
   - 
