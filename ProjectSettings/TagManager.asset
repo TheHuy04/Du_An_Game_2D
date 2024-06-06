@@ -10,9 +10,11 @@ TagManager:
   - Ladder
   - Button
   - Players
-  - exit
   - jump
   - bullet
+  - enemy
+  - seller
+  - wall
   layers:
   - Default
   - TransparentFX
