@@ -67,6 +67,7 @@ public class Player4 : MonoBehaviour
         {
             Time.timeScale = 0f;
             pause.SetActive(true);
+
         }
     }
     public void addscore(int points)
