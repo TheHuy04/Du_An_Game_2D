@@ -37,6 +37,14 @@ public class Player_control : MonoBehaviour
     private Animator _animator;
 
     public GameObject pause;
+
+    public AudioClip CollectCoin;
+    public AudioClip JumpEffect;
+    public AudioClip BulletEffect;
+    public AudioClip landEffect;
+    
+    
+    private AudioSource _audiosource;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +54,7 @@ public class Player_control : MonoBehaviour
         _boxCollider2D = GetComponent<BoxCollider2D>();
         _CoinText.text = _coins.ToString();
         Time.timeScale = 1f;
+        _audiosource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -107,6 +116,8 @@ public class Player_control : MonoBehaviour
         var verticalInput = Input.GetKeyDown(KeyCode.Space) ? 1 : 0;
         if (verticalInput > 0)
         {
+            _audiosource.PlayOneShot(landEffect);
+            _audiosource.PlayOneShot(JumpEffect);
             _animator.SetBool("IsJump", true);
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpForce);
         }
@@ -120,6 +131,7 @@ public class Player_control : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             _animator.SetBool("IsAttack", true);
+            _audiosource.PlayOneShot(BulletEffect);
             //tao vien dan tai vi tri sung
             var bullet = Instantiate(_bulletPrefab, _arrow.position, Quaternion.identity);
             // cho vien dan bay theo huong nhan vat:        
@@ -155,6 +167,7 @@ public class Player_control : MonoBehaviour
         else if (collision.CompareTag("Coins"))
         {
             Destroy(collision.gameObject);
+            _audiosource.PlayOneShot(CollectCoin);
             _coins += collision.gameObject.GetComponent<Coins>().coinvaule;
             _CoinText.text = _coins.ToString();
         }
@@ -166,6 +179,7 @@ public class Player_control : MonoBehaviour
             _rigidbody2D.gravityScale = 1f;
             Climb= false;
             _animator.SetBool("Is_land", false);
+            
         }
     }
 
