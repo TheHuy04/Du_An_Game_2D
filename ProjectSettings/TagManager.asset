@@ -26,6 +26,7 @@ TagManager:
   - lander
   - Bullet
   - Coins
+  - Lader3
   layers:
   - Default
   - TransparentFX
@@ -62,6 +63,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: lader
+    uniqueID: 3235593425
+    locked: 0
+  - name: player3
+    uniqueID: 3939489467
     locked: 0
   - name: HP
     uniqueID: 4249274793
