@@ -15,16 +15,27 @@ TagManager:
   - enemy
   - seller
   - wall
+  - Player3
+  - Ground
+  - Audio3
+  - Water
+  - Coin3
+  - Monster3
+  - Trap3
+  - Cong
+  - lander
+  - Bullet
+  - Coins
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Flat_form
   - Water
   - UI
-  - 
-  - 
-  - 
+  - pl
+  - ms
+  - Flat_form
   - 
   - 
   - 
@@ -51,4 +62,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: HP
+    uniqueID: 4249274793
     locked: 0
