@@ -16,6 +16,7 @@ public class Player4 : MonoBehaviour
     public int mang = 3;
     public Text lifetext, arrowtext, pointtext;
     public Transform bowpos;
+    public AudioSource udio, adi;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,7 @@ public class Player4 : MonoBehaviour
         else ani.SetBool("Speed", false);
         if (Input.GetKeyDown(KeyCode.UpArrow) && jump)
         {
+            udio.Play();
             qf.AddForce(Vector2.up * 5f, ForceMode2D.Impulse);
         }
         if (mang < 1)
@@ -88,7 +90,7 @@ public class Player4 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Players") || collision.gameObject.CompareTag("wall"))
+        if (collision.gameObject.CompareTag("ground"))
         {
             jump = true;
             ani.SetBool("Force", false);
@@ -101,7 +103,7 @@ public class Player4 : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Players") || collision.gameObject.CompareTag("wall"))
+        if (collision.gameObject.CompareTag("ground"))
         {
             jump = false;
             ani.SetBool("Force",true);
