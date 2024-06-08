@@ -15,8 +15,8 @@ public class Player4 : MonoBehaviour
     public Animator ani;
     public int mang = 3;
     public Text lifetext, pointtext;
-    public Transform bowpos, checkpoint;
-    public AudioSource udio, adi, dio;
+    public Transform bowpos,checkpoint;
+    public AudioSource udio, adi, dio, eio;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class Player4 : MonoBehaviour
         udio = GetComponent<AudioSource>();
         adi = GetComponent<AudioSource>();
         dio = GetComponent<AudioSource>();
+        eio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,7 +56,6 @@ public class Player4 : MonoBehaviour
         {
             Destroy(this.gameObject);
             die.SetActive(true);
-            transform.position = checkpoint.position;
         }
         if (climbing)
         {
@@ -99,6 +99,7 @@ public class Player4 : MonoBehaviour
         {
             mang -= 1;
             lifetext.text = "Life " + mang;
+            transform.position = checkpoint.position;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -113,6 +114,7 @@ public class Player4 : MonoBehaviour
     {
         if (collision.CompareTag("Ladder"))
         {
+            eio.Play();
             qf.gravityScale = 0;
             climbing = true;
             ani.SetBool("climbing", true);
@@ -127,6 +129,7 @@ public class Player4 : MonoBehaviour
     {
         if (collision.CompareTag("Ladder"))
         {
+            eio.Stop();
             qf.gravityScale = 1f;
             climbing = false;
             ani.SetBool("climbing",false);
