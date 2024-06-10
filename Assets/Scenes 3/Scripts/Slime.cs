@@ -1,58 +1,59 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Slime : MonoBehaviour
 {
-    [SerializeField] float start, end, speed;
-    Rigidbody2D rig;
-    int isRight = 1;
-    GameObject player;
+    [SerializeField]
+    private bool _moveRight = false;
+    [SerializeField]
+    private float _moveSpeed = 3f;
+    [SerializeField]
+    private float _TimeFlip = 5.0f;
+    [SerializeField]
+    private float _timeFlipCounter = 0.0f;
+    [SerializeField]
+    public AudioClip enemyEffect;
+    public AudioClip enemyDead;
+    private AudioSource _enemySource;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player3");
-        rig = GetComponent<Rigidbody2D>();
+        _enemySource = GetComponent<AudioSource>();
     }
 
-    void Run()
-    {
-        var x_enemy = transform.position.x;
-        if (x_enemy < start)
-        {
-            isRight = 1;
-        }
-        if (x_enemy > end)
-        {
-            isRight = -1;
-        }
-        transform.Translate(new Vector3(isRight * speed * Time.deltaTime, 0, 0));
-
-        var y_enemy = transform.position.y;
-        var x_player = player.transform.position.x;
-        var y_player = player.transform.position.y;
-        if ((x_player > start && x_player < end) && (y_player < y_enemy + 1 && y_player > y_enemy - 1))
-        {
-            if (x_player < x_enemy)
-            {
-                isRight = -1;
-            }
-            if (y_player > y_enemy)
-            {
-                isRight = 1;
-            }
-        }
-    }
-    void Flip()
-    {
-        transform.localScale = new Vector2(isRight, 1f);
-    }
 
     // Update is called once per frame
     void Update()
     {
-        Run();
-        Flip();
+        _timeFlipCounter -= Time.deltaTime;
+        if (_timeFlipCounter < 0)
+        {
+            _timeFlipCounter = _TimeFlip;
+            _moveRight = !_moveRight;
+            Flip();
+        }
+        Move();
     }
+    private void Move()
+    {
+        Vector2 direction = _moveRight ? Vector2.left : Vector2.right;
+        transform.Translate(direction * _moveSpeed * Time.deltaTime);
+    }
+    private void Flip()
+    {
+        Vector3 Scale = transform.localScale;
+        Scale.x *= -1;
+        transform.localScale = Scale;
+    }
+
+    void Die()
+    {
+        // Thêm hiệu ứng hoặc âm thanh chết ở đây nếu muốn
+        Destroy(gameObject);
+    }
+
+
 }
 
