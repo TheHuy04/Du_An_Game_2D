@@ -108,6 +108,7 @@ public class Player_control : MonoBehaviour
     }
     private void Jump()
     {
+        _animator.SetBool("IsJump", true);
         var check = _boxCollider2D.IsTouchingLayers(LayerMask.GetMask("Flat_form"));
         if (check == false)
         {
