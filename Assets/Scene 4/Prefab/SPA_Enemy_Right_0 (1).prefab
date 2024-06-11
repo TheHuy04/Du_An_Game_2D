@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7058888056274493256}
   m_Layer: 0
   m_Name: SPA_Enemy_Right_0 (1)
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99b023cecd6e27f4abdcce55ac63396e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 2
   timer: 1
+  points: 1
+  scorekeeper: {fileID: 0}
 --- !u!50 &1309442480068902301
 Rigidbody2D:
   serializedVersion: 4
