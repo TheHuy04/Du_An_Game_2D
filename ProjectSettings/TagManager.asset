@@ -13,6 +13,12 @@ TagManager:
   - Bullet
   - Bullet 2
   - Cong
+  - Undefined
+  - Enemy
+  - ground
+  - Ladder
+  - jump
+  - bullet
   layers:
   - Default
   - TransparentFX

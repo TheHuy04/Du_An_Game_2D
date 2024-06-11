@@ -99,7 +99,7 @@ public class Player4 : MonoBehaviour
         {
             mang -= 1;
             lifetext.text = "Life " + mang;
-            transform.position = checkpoint.position;
+            gameObject.transform.position = checkpoint.position;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
