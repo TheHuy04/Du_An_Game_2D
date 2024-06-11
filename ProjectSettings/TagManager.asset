@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - lander
-  - Portal
-  - Tilemap
-  - enemy
-  - Coins
-  - Bullet
-  - Cong
-  - Flat_form
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -19,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Flat_form
+  - 
   - 
   - 
   - 

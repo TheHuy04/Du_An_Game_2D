@@ -8,25 +8,20 @@ using UnityEngine.UI;
 
 public class Player4 : MonoBehaviour
 {
-    public float diem = 0;
+    public GameObject die, pause, arrowprefab;
+    public float diem = 0, arrowmain = 30f;
     public Rigidbody2D qf;
-    public bool jump;
+    public bool jump, climbing;
     public Animator ani;
     public int mang = 3;
-    public Text lifetext;
-    public Transform checkpoint;
-    public bool climbing;
-    public GameObject arrowprefab;
+    public Text lifetext, arrowtext, pointtext;
     public Transform bowpos;
-    public float arrowmain = 30f;
-    public Text arrowtext;
-    public Text pointtext;
     // Start is called before the first frame update
     void Start()
     {
         qf = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
-
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
@@ -52,6 +47,7 @@ public class Player4 : MonoBehaviour
         if (mang < 1)
         {
             Destroy(this.gameObject);
+            die.SetActive(true);
         }
         if (climbing)
         {
@@ -61,10 +57,22 @@ public class Player4 : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && arrowmain > 0)
         {
+            ani.SetBool("shoot",true);
             arrowmain -= 1f;
             arrowtext.text = "Arrow: " + arrowmain + "/30";
             shoot();
         }
+        else ani.SetBool("shoot",false);
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Time.timeScale = 0f;
+            pause.SetActive(true);
+
+        }
+    }
+    public void tangcung()
+    {
+            arrowmain += 10;
     }
     public void addscore(int points)
     {
@@ -80,7 +88,7 @@ public class Player4 : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Players") || collision.gameObject.CompareTag("wall"))
         {
             jump = true;
             ani.SetBool("Force", false);
@@ -89,12 +97,11 @@ public class Player4 : MonoBehaviour
         {
             mang -= 1;
             lifetext.text = "Life " + mang;
-            transform.position = checkpoint.position;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Players") || collision.gameObject.CompareTag("wall"))
         {
             jump = false;
             ani.SetBool("Force",true);
@@ -107,6 +114,11 @@ public class Player4 : MonoBehaviour
             qf.gravityScale = 0;
             climbing = true;
             ani.SetBool("climbing", true);
+        }
+        if (collision.CompareTag("Enemy"))
+        {
+            mang -= 1;
+            lifetext.text = "Life " + mang;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
