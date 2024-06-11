@@ -6,20 +6,21 @@ TagManager:
   tags:
   - lander
   - Portal
-  - Tilemap
+  - Flat_form
   - enemy
   - Coins
+  - Flat_form2
   - Bullet
+  - Bullet 2
   - Cong
-  - Flat_form
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Flat_form
   - Water
   - UI
-  - Flat_form
+  - 
   - 
   - 
   - 

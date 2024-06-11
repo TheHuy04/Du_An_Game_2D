@@ -20501,6 +20501,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1448902369}
     - target: {fileID: 405287891470697827, guid: 2148cd620328721498c7317f0682c5b9, type: 3}
+      propertyPath: BulletEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 7fe31d0761dac5d40a3ef5b2fadf2a4a, type: 3}
+    - target: {fileID: 405287891470697827, guid: 2148cd620328721498c7317f0682c5b9, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 3299028427665789935, guid: 5666c33aa6ec28b40bd02f42cb40352f, type: 3}
+    - target: {fileID: 405287891470697827, guid: 2148cd620328721498c7317f0682c5b9, type: 3}
       propertyPath: _GameOverPanel
       value: 
       objectReference: {fileID: 1651417024}
@@ -21016,9 +21024,9 @@ GameObject:
   - component: {fileID: 2029056784}
   - component: {fileID: 2029056783}
   - component: {fileID: 2029056782}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: The platform
-  m_TagString: Flat_form
+  m_TagString: Flat_form2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
