@@ -3,12 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - lander
+  - Portal
+  - Flat_form
+  - enemy
+  - Coins
+  - Flat_form2
+  - Bullet
+  - Bullet 2
+  - Cong
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Flat_form
   - Water
   - UI
   - 
