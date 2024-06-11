@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2210036388968445915}
   m_Layer: 0
   m_Name: Flight_0
-  m_TagString: Enemy
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,10 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f9a3e97a1e4534e899390b13f7e6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
   timer: 1
-  points: 3
-  scorekeeper: {fileID: 0}
 --- !u!95 &2210036388968445915
 Animator:
   serializedVersion: 5

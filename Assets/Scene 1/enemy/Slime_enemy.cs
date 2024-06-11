@@ -12,15 +12,10 @@ public class Slime_enemy : MonoBehaviour
     private float _TimeFlip = 5.0f;
     [SerializeField]
     private float _timeFlipCounter = 0.0f;
-    [SerializeField]
-    private int _HP = 100;
-    public AudioClip enemyEffect;
-    public AudioClip enemyDead;
-    private AudioSource _enemySource;
     // Start is called before the first frame update
     void Start()
     {
-        _enemySource = GetComponent<AudioSource>();
+        
     }
 
     // Update is called once per frame
@@ -50,15 +45,8 @@ public class Slime_enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            _HP -= 25;
-            _enemySource.PlayOneShot(enemyEffect);
+            Destroy(gameObject);
             Destroy(collision.gameObject);
-            if (_HP == 0)
-            {
-                _enemySource.PlayOneShot(enemyDead);
-                Destroy(gameObject,0.2f);
-                Destroy(collision.gameObject);
-            }
         }
     }
 }

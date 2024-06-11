@@ -27,8 +27,6 @@ public class PlayerController : MonoBehaviour
     private float dashTime;
     private float dashCooldownTime;
 
-    public bool Climb;
-
 
     // Start is called before the first frame update
     void Start()
@@ -72,35 +70,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= dashCooldownTime)
         {
             Dash();
-        }
-        if (Climb)
-        {
-            var lenThang = Input.GetAxisRaw("Horizontal");
-            var lenThang2 = Input.GetAxisRaw("Vertical");
-            rb.velocity = new Vector3(lenThang * 1f, lenThang2 * 3f, 0f);
-        }
-    }
-
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Lader3"))
-        {
-            rb.gravityScale = 0;
-            Climb = true;
-            anm.SetBool("Thang", true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Lader3"))
-        {
-            rb.gravityScale = 1f;
-            Climb = false;
-            anm.SetBool("Thang", false);
-
         }
 
     }
@@ -156,5 +125,4 @@ public class PlayerController : MonoBehaviour
         // Gỡ lỗi
         Debug.Log(rb.velocity.x);
     }
-
 }

@@ -33,11 +33,11 @@ public class fireslime : MonoBehaviour
         while (timers == 1)
         {
             timers -= 1;
-            yield return new WaitForSeconds(0.00005f);
+            yield return new WaitForSeconds(0.005f);
             while (timers == 0)
             {
                 timers += 1;
-                yield return new WaitForSeconds(3f);
+                yield return new WaitForSeconds(2f);
             }
         }
     }
@@ -56,7 +56,7 @@ public class fireslime : MonoBehaviour
             GameObject go = Instantiate(slimebullletprefab, fireball.position, fireball.rotation);
             Rigidbody2D rb = go.GetComponent<Rigidbody2D>();
             rb.AddForce(fireball.right * 26f * Mathf.Sign(transform.localScale.x), ForceMode2D.Impulse);
-            Destroy(rb.gameObject, 1f);
+            Destroy(rb.gameObject, 1.5f);
         }
     }
 }

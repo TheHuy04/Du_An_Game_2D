@@ -1,10 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
     private int score = 0;
     public TextMeshProUGUI ScoreText;
 
-    private AudioManager audioManager;
+
 
     private void OnEnable()
     {
@@ -34,10 +32,10 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         
-        anm = GetComponent<Animator>(); 
+        anm = GetComponent<Animator>(); // Lấy thành phần Animator
         currentHealth = maxHealth;
         healthBar.UpdateBar(currentHealth, maxHealth);
-        UpdateScoreText(); //cap nhat diem
+        UpdateScoreText(); // Cập nhật điểm số ban đầu
     }
 
     //bi danh se ntn
@@ -60,15 +58,14 @@ public class PlayerHealth : MonoBehaviour
     }
     private IEnumerator WaitForAnimation()
     {
-        
+        // Giả sử Animation "Die" kéo dài khoảng 1 giây, bạn có thể điều chỉnh thời gian này
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void AddScore(int points)
     {
         score += points;
-        UpdateScoreText(); // cap nhat diem
+        UpdateScoreText(); // Cập nhật điểm số trên màn hình
     }
     private void UpdateScoreText()
     {
@@ -83,34 +80,15 @@ public class PlayerHealth : MonoBehaviour
         {
             CollectCoin(other.gameObject);
         }
-        else if (other.gameObject.CompareTag("Trap3")) // Ktra bay
-        {
-            TakeDamage(1); // Gây 1 sát thương khi chạm vào bẫy
-        }
-        else if (other.gameObject.CompareTag("Water"))
-        {
-            TakeDamage(1000);
-        }
+    }
 
-    }   
-
+    // Hàm này xử lý việc nhận dạng và xử lý đồng xu
     private void CollectCoin(GameObject coin)
     {
-        audioManager.PlaySFX(audioManager.coinClip);
         Destroy(coin); // Hủy đồng xu sau khi nhặt
         AddScore(1); // Tăng điểm số
     }
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        currentHealth = Mathf.Min(currentHealth, maxHealth);
-        healthBar.UpdateBar(currentHealth, maxHealth);
-    }
-    private void Awake()
-    {
-        audioManager = GameObject.FindGameObjectWithTag("Audio3").GetComponent<AudioManager>();
-    }
-
+ 
 
 
 }
