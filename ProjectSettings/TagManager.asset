@@ -4,10 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - ground
-  - Ladder
-  - jump
+  - lander
+  - Portal
+  - Flat_form
+  - enemy
+  - Coins
+  - Flat_form2
+  - Bullet
+  - Bullet 2
+  - Cong
   layers:
   - Default
   - TransparentFX
