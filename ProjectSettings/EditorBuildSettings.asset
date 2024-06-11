@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scene 4/Scene4_HuyTran.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes 3/Scenes 3.unity
-    guid: 9ed2f3fc3f294df4e8245220974cf436
+    path: Assets/Scene 2/Scene 2.unity
+    guid: f76f0b80e3430e446a45176591b9936c
+  - enabled: 1
+    path: Assets/Scene 1/Scene1.unity
+    guid: d233e6947cc6ee743845db000999d5f5
   m_configObjects: {}
