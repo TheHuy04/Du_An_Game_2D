@@ -4,29 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Gate
-  - Enemy
-  - ground
-  - Ladder
-  - Button
-  - Players
-  - jump
-  - bullet
-  - enemy
-  - seller
-  - wall
-  - Player3
-  - Ground
-  - Audio3
-  - Water
-  - Coin3
-  - Monster3
-  - Trap3
-  - Cong
   - lander
-  - Bullet
+  - Portal
+  - Flat_form
+  - enemy
   - Coins
-  - Lader3
+  - Flat_form2
+  - Bullet
+  - Bullet 2
+  - Cong
   layers:
   - Default
   - TransparentFX
@@ -34,9 +20,9 @@ TagManager:
   - Flat_form
   - Water
   - UI
-  - pl
-  - ms
-  - Flat_form
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -63,13 +49,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: lader
-    uniqueID: 3235593425
-    locked: 0
-  - name: player3
-    uniqueID: 3939489467
-    locked: 0
-  - name: HP
-    uniqueID: 4249274793
     locked: 0

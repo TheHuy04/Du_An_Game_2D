@@ -9,7 +9,7 @@ public class PortaltoS3 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Scenes 3");
         }
     }
 }
