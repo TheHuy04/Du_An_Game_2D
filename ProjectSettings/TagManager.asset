@@ -4,21 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - lander
-  - Portal
-  - Flat_form
-  - enemy
-  - Coins
-  - Flat_form2
-  - Bullet
-  - Bullet 2
-  - Cong
-  - Undefined
   - Enemy
   - ground
   - Ladder
   - jump
   - bullet
+  - button
+  - moving
   layers:
   - Default
   - TransparentFX

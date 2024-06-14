@@ -28,12 +28,26 @@ public class MovingFlatForm : MonoBehaviour
         while(timer == 1)
         {
             timer -= 1;
-            yield return new WaitForSeconds(7f);
+            yield return new WaitForSeconds(7.5f);
             while (timer == 0)
             {
                 timer += 1;
-                yield return new WaitForSeconds(7f);
+                yield return new WaitForSeconds(7.5f);
             }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(this.transform);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
         }
     }
 }
