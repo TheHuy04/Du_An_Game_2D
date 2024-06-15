@@ -13,6 +13,14 @@ TagManager:
   - Bullet
   - Bullet 2
   - Cong
+  - Ground
+  - Player3
+  - Lader3
+  - Monster3
+  - Audio3
+  - Water
+  - Coin3
+  - Trap3
   layers:
   - Default
   - TransparentFX
@@ -20,8 +28,8 @@ TagManager:
   - Flat_form
   - Water
   - UI
-  - 
-  - 
+  - pl
+  - ms
   - 
   - 
   - 
@@ -49,4 +57,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: canvas
+    uniqueID: 1820552325
+    locked: 0
+  - name: thang
+    uniqueID: 1878443637
+    locked: 0
+  - name: player
+    uniqueID: 4264642523
     locked: 0

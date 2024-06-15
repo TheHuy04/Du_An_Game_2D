@@ -50,7 +50,7 @@ public class Slime : MonoBehaviour
 
     void Die()
     {
-        // Thêm hiệu ứng hoặc âm thanh chết ở đây nếu muốn
+        
         Destroy(gameObject);
     }
 
