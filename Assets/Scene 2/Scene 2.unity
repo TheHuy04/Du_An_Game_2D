@@ -3483,7 +3483,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -21051,6 +21051,10 @@ PrefabInstance:
       propertyPath: BulletEffect
       value: 
       objectReference: {fileID: 8300000, guid: 7fe31d0761dac5d40a3ef5b2fadf2a4a, type: 3}
+    - target: {fileID: 405287891470697827, guid: 2148cd620328721498c7317f0682c5b9, type: 3}
+      propertyPath: _LivesSlider
+      value: 
+      objectReference: {fileID: 983056728}
     - target: {fileID: 405287891470697827, guid: 2148cd620328721498c7317f0682c5b9, type: 3}
       propertyPath: _bulletPrefab
       value: 
