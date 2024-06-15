@@ -4,6 +4,25 @@
 TagManager:
   serializedVersion: 2
   tags:
+
+  - lander
+  - Portal
+  - Flat_form
+  - enemy
+  - Coins
+  - Flat_form2
+  - Bullet
+  - Bullet 2
+  - Cong
+  - Ground
+  - Player3
+  - Lader3
+  - Monster3
+  - Audio3
+  - Water
+  - Coin3
+  - Trap3
+
   - Enemy
   - ground
   - Ladder
@@ -11,15 +30,15 @@ TagManager:
   - bullet
   - button
   - moving
+
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Flat_form
   - Water
   - UI
-  - 
-  - 
+  - pl
+  - ms
   - 
   - 
   - 
@@ -47,4 +66,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: canvas
+    uniqueID: 1820552325
+    locked: 0
+  - name: thang
+    uniqueID: 1878443637
+    locked: 0
+  - name: player
+    uniqueID: 4264642523
     locked: 0

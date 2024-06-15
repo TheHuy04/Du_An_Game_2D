@@ -90,6 +90,7 @@ public class Monster : MonoBehaviour
     }
     void Die()
     {
+        audioManager.PlaySFX(audioManager.monsterDie);
         anm.SetTrigger("Die");
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
