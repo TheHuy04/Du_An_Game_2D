@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5567308143040168747}
   m_Layer: 0
   m_Name: bolt1
-  m_TagString: Enemy
+  m_TagString: bossfire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

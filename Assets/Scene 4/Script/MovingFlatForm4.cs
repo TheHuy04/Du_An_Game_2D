@@ -35,6 +35,14 @@ public class skeletons : MonoBehaviour
             scorekeeper.tangdiem(points);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet"))
+        {
+            health -= 2f;
+            Destroy(collision.gameObject);
+        }
+    }
     IEnumerator movingflatform()
     {
         while(timer == 1)
@@ -46,14 +54,6 @@ public class skeletons : MonoBehaviour
                 timer += 1;
                 yield return new WaitForSeconds(2.5f);
             }
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("bullet"))
-        {
-            health -= 1;
-            Destroy(collision.gameObject);
         }
     }
 }

@@ -14,7 +14,6 @@ public class ScoreKeeper : MonoBehaviour
     public float ki = 0f;
     void Start()
     {
-        cointext.text = diemhientai + " Coin";
         pl = FindObjectOfType<Player4>();
     }
     void Update()
@@ -33,6 +32,11 @@ public class ScoreKeeper : MonoBehaviour
     public void tangdiem(int amount)
     {
         diemhientai += amount;
+        cointext.text = diemhientai + " Coin";
+    }
+    public void trudiem(int amount)
+    {
+        diemhientai -= amount;
         cointext.text = diemhientai + " Coin";
     }
 }
