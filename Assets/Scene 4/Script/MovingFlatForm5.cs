@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class goblin : MonoBehaviour
+public class goblin : Enemybip
 {
     public float timer = 1f;
     public float health = 4f;
@@ -35,6 +35,14 @@ public class goblin : MonoBehaviour
             scorekeeper.tangdiem(points);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet"))
+        {
+            health -= 2f;
+            Destroy(collision.gameObject);
+        }
+    }
     IEnumerator movingflatform()
     {
         while(timer == 1)
@@ -46,14 +54,6 @@ public class goblin : MonoBehaviour
                 timer += 1;
                 yield return new WaitForSeconds(2f);
             }
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("bullet"))
-        {
-            health -= 1f;
-            Destroy(collision.gameObject);
         }
     }
 }

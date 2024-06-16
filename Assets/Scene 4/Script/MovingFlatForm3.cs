@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Policy;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -31,12 +32,13 @@ public class musroom : MonoBehaviour
             transform.Translate(Vector3.right * 3f * Time.deltaTime);
             transform.localScale = new Vector3(1f,1f, 1f);
         }
-        if (health == 0)
+        if (health <= 0)
         {
             Destroy(this.gameObject);
             scorekeeper.tangdiem(points);
         }
     }
+
     IEnumerator movingflatform()
     {
         while(timer == 1)
@@ -54,11 +56,11 @@ public class musroom : MonoBehaviour
     {
         if (collision.CompareTag("jump"))
         {
-            rb.AddForce(Vector2.up * 5f,ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * 6f,ForceMode2D.Impulse);
         }
         if (collision.CompareTag("bullet"))
         {
-            health -= 1f;
+            health -= 2f;
             Destroy(collision.gameObject);
         }
     }

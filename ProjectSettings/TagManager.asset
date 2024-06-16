@@ -4,13 +4,25 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - ground
   - Ladder
   - jump
   - bullet
   - button
   - moving
+  - Ground
+  - Player3
+  - Lader3
+  - Monster3
+  - Audio3
+  - Water
+  - Coin3
+  - Trap3
+  - Cong
+  - bossfire
+  - Enemyfire
+  - Enemys
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -18,7 +30,7 @@ TagManager:
   - Flat_form
   - Water
   - UI
-  - 
+  - Enemywhish
   - 
   - 
   - 

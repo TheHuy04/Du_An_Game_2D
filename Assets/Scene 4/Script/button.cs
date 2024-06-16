@@ -22,7 +22,7 @@ public class button : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             ani.SetBool("click",true);
-            Destroy(cuaso.gameObject);
+            cuaso.SetActive(false);
         }
     }
 }

@@ -28,6 +28,14 @@ public class fireslime : MonoBehaviour
             scorekeeper.tangdiem(points);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullet"))
+        {
+            health -= 2f;
+            Destroy(collision.gameObject);
+        }
+    }
     IEnumerator timeforshoot()
     {
         while (timers == 1)
@@ -39,14 +47,6 @@ public class fireslime : MonoBehaviour
                 timers += 1;
                 yield return new WaitForSeconds(3f);
             }
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("bullet"))
-        {
-            health -= 1f;
-            Destroy(collision.gameObject);
         }
     }
     public void shoot()

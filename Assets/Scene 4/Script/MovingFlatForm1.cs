@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class flyingenemy : MonoBehaviour
 {
-    public float health = 4f;
-    public float timer = 1f;
-    public int points = 3;
+    public float health = 4f, timer = 1f, hitfor = 0f;
+    public int points = 3, maunguoi = 10;
     public ScoreKeeper scorekeeper;
+    public bool hit;
+    public Transform fireme;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,7 @@ public class flyingenemy : MonoBehaviour
             Destroy(this.gameObject);
             scorekeeper.tangdiem(points);
         }
-    }
+}
     IEnumerator movingflatform()
     {
         while(timer == 1)
@@ -52,7 +54,7 @@ public class flyingenemy : MonoBehaviour
     {
         if (collision.CompareTag("bullet"))
         {
-            health -= 1f;
+            health -= 2f;
             Destroy(collision.gameObject);
         }
     }
