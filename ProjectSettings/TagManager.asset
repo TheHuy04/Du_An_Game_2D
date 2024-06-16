@@ -23,6 +23,8 @@ TagManager:
   - Enemyfire
   - Enemys
   - Enemy
+  - Coins
+  - Bullet
   layers:
   - Default
   - TransparentFX
