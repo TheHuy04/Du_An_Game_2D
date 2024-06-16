@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip attackClip;
     public AudioClip monsterDie;
     public AudioClip bossDie;
+    public AudioClip Health;
 
     // Start is called before the first frame update
     void Start()
