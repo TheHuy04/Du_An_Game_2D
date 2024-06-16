@@ -5,6 +5,7 @@ using UnityEngine;
 public class button2 : MonoBehaviour
 {
     public AudioSource ped, xpt;
+    public GameObject cua2;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class button2 : MonoBehaviour
         {
             ped.Stop();
             xpt.Play();
+            cua2.SetActive(true);
         }
     }
 }

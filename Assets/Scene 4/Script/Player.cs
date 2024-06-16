@@ -91,8 +91,10 @@ public class Player4 : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.F) && skills == 1f && timerspawn == 0f)
         {
             timerspawn += 1f;
-            GameObject bot = Instantiate(botsp, bowpos.position, bowpos.rotation);
-            StartCoroutine(loadid());
+            StartCoroutine(banchetno());
+            GameObject bots = Instantiate(botsp, bowpos.position, bowpos.rotation);
+            Rigidbody2D rb = bots.GetComponent<Rigidbody2D>();
+            Destroy(rb.gameObject, 10f);
         }
     }
     public void skill(int chieuthuc)
@@ -129,6 +131,19 @@ public class Player4 : MonoBehaviour
             fire = false;
             jump = false;
             ani.SetBool("Force", true);
+        }
+    }
+    IEnumerator banchetno()
+    {
+        while(timerspawn == 1f)
+        {
+            timerspawn += 1f;
+            yield return new WaitForSeconds(10f);
+            while(timerspawn == 2f)
+            {
+                timerspawn -= 2f;
+                yield return new WaitForSeconds(10f);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -174,14 +189,6 @@ public class Player4 : MonoBehaviour
                     yield return new WaitForSeconds(0.5f);
                 }
             }
-        }
-    }
-    IEnumerator loadid()
-    {
-        while(timerspawn == 1f)
-        {
-            timerspawn -= 1f;
-            yield return new WaitForSeconds(10f);
         }
     }
 }

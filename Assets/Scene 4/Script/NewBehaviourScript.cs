@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public GameObject panel,panels, button;
+    public GameObject panel,panels;
     public Player4 player;
     public ScoreKeeper scoreKeeper;
     public Slider slider;

@@ -24,9 +24,10 @@ public class boss : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (healthslider == 0)
+        if (healthslider <= 0)
         {
-            Destroy(this.gameObject);
+            ani.SetBool("chet",true);
+            Destroy(this.gameObject,2f);
             Keeper.tangdiem(point);
         }
         if (skill == 1f)
@@ -58,8 +59,7 @@ public class boss : MonoBehaviour
             if(count -- > 0f)
             {
                 ani.SetBool("chieuba", true);
-                //float position = Random.Range(29f, 12f);
-                GameObject go3 = Instantiate(chieu3, /*new Vector3(position, 5f, 0)*/chieub3.position, Quaternion.identity);
+                GameObject go3 = Instantiate(chieu3, chieub3.position, Quaternion.identity);
             }
         }
         else if(skill == 0f)

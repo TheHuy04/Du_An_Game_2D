@@ -28,7 +28,7 @@ public class bot : MonoBehaviour
             GameObject shoot = Instantiate(sung, hom.position, hom.rotation);
             Rigidbody2D body = shoot.GetComponent<Rigidbody2D>();
             body.AddForce(hom.right * 20f, ForceMode2D.Impulse);
-            Destroy(body.gameObject,10f);
+            Destroy(body.gameObject,2f);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,7 +47,7 @@ public class bot : MonoBehaviour
             while(timfor == 1f)
             {
                 timfor -= 1f;
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(2f);
             }
         }
     }
