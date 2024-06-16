@@ -154,7 +154,7 @@ MonoBehaviour:
   _TimeFlip: 5
   _timeFlipCounter: 0
   _HP: 100
-  enemyEffect: {fileID: 8300000, guid: 8b23b175a78d6b5458322e3a6c9905d0, type: 3}
+  enemyEffect: {fileID: 8300000, guid: e3aa99f713499fc4690b897722d2c0a5, type: 3}
   enemyDead: {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
 --- !u!61 &1821642911334219086
 BoxCollider2D:

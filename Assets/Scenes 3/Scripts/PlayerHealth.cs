@@ -85,7 +85,7 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Trap3")) // Ktra bay
         {
-            TakeDamage(1); // Gây 1 sát thương khi chạm vào bẫy
+            TakeDamage(1); // gay 1 dmg khi cham bay
         }
         else if (other.gameObject.CompareTag("Water"))
         {
@@ -97,11 +97,12 @@ public class PlayerHealth : MonoBehaviour
     private void CollectCoin(GameObject coin)
     {
         audioManager.PlaySFX(audioManager.coinClip);
-        Destroy(coin); // Hủy đồng xu sau khi nhặt
-        AddScore(1); // Tăng điểm số
+        Destroy(coin); 
+        AddScore(1); 
     }
     public void Heal(int amount)
     {
+        audioManager.PlaySFX(audioManager.Health);
         currentHealth += amount;
         currentHealth = Mathf.Min(currentHealth, maxHealth);
         healthBar.UpdateBar(currentHealth, maxHealth);

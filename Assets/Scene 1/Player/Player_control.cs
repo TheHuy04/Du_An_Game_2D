@@ -26,10 +26,8 @@ public class Player_control : MonoBehaviour
     public TextMeshProUGUI _CoinText;
     private int _coins = 0;
 
-    public TextMeshProUGUI _LivesText;
-    private static  int _Lives;
-
-    public Transform checkPoint;
+    public Slider _LivesSlider;
+    private static  int _Lives = 100;
 
     public GameObject _GameOverPanel;
 
@@ -42,13 +40,13 @@ public class Player_control : MonoBehaviour
     public AudioClip JumpEffect;
     public AudioClip BulletEffect;
     public AudioClip landEffect;
-    
-    
+
+    public float timeAttack = 0f;
     private AudioSource _audiosource;
     // Start is called before the first frame update
     void Start()
     {
-        _Lives = 3;
+        _Lives = 100;
         _rigidbody2D = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _boxCollider2D = GetComponent<BoxCollider2D>();
@@ -72,7 +70,8 @@ public class Player_control : MonoBehaviour
 
         if(_Lives == 0)
         {
-            Destroy(this.gameObject);
+            _animator.SetBool("IsDie", true);
+            Destroy(this.gameObject,3f);
             _GameOverPanel.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -129,9 +128,12 @@ public class Player_control : MonoBehaviour
     }
     private void Fire()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && timeAttack == 0) 
         {
-            _animator.SetBool("IsAttack", true);
+            timeAttack += 1f;
+            StartCoroutine(loadingtime());
+            
+            
             _audiosource.PlayOneShot(BulletEffect);
             //tao vien dan tai vi tri sung
             var bullet = Instantiate(_bulletPrefab, _arrow.position, Quaternion.identity);
@@ -144,9 +146,14 @@ public class Player_control : MonoBehaviour
             }
             bullet.GetComponent<Rigidbody2D>().velocity = velocity;
             // huy dan sau 2s
-            Destroy(bullet, 1f);          
+            
+            Destroy(bullet, 0.05f);          
         }
-        else
+        if (timeAttack > 0)
+        {
+            _animator.SetBool("IsAttack", true);
+        }
+        else if (timeAttack <= 0) 
         {
             _animator.SetBool("IsAttack", false);
         }
@@ -161,9 +168,9 @@ public class Player_control : MonoBehaviour
         }
         else if (collision.CompareTag("enemy"))
         {
-            _Lives -= 1;
-            _LivesText.text = "Lives X " + _Lives;
-            transform.position = checkPoint.position;
+            _Lives -= 5;
+            _LivesSlider.value = _Lives;
+           
         }
         else if (collision.CompareTag("Coins"))
         {
@@ -183,5 +190,17 @@ public class Player_control : MonoBehaviour
             
         }
     }
-
+    IEnumerator loadingtime()
+    {
+        while (timeAttack == 1f)
+        {
+            timeAttack += 1f;
+            yield return new WaitForSeconds(0.1f);
+            while(timeAttack  == 2f)
+            {
+                timeAttack -= 2f;
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+    }
 }
