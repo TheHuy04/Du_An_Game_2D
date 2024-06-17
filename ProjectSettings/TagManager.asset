@@ -60,3 +60,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: thang
+    uniqueID: 1725985137
+    locked: 0
+  - name: canvas
+    uniqueID: 3320481699
+    locked: 0
+  - name: pl
+    uniqueID: 2705109767
+    locked: 0
