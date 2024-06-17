@@ -26,6 +26,7 @@ TagManager:
   - Coins
   - Bullet
   - enemy
+  - TRAP
   layers:
   - Default
   - TransparentFX

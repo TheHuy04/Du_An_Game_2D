@@ -71,7 +71,7 @@ public class Player_control : MonoBehaviour
         if(_Lives == 0)
         {
             _animator.SetBool("IsDie", true);
-            Destroy(this.gameObject,3f);
+            Destroy(this.gameObject,2f);
             _GameOverPanel.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -171,6 +171,11 @@ public class Player_control : MonoBehaviour
             _Lives -= 5;
             _LivesSlider.value = _Lives;
            
+        }
+        if (collision.CompareTag("TRAP"))
+        {
+            _Lives = 0;
+            _LivesSlider.value = _Lives;
         }
         else if (collision.CompareTag("Coins"))
         {
