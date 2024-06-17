@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
@@ -1087,7 +1087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1887,7 +1887,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -203083171
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -41237,6 +41237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Xuong3
       objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8192902
@@ -42914,7 +42918,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1768231575}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 256
   moveSpeed: 3
   patrolRange: 5
 --- !u!50 &991558559
@@ -43159,6 +43163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Xuong3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.11904
@@ -43270,7 +43278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129765512}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: attackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -43530,7 +43538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43811,7 +43819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233765359}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43912,7 +43920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44026,7 +44034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
@@ -44512,7 +44520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7043784536059833337, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7706715472746402071, guid: a2121112352f2614b87dc517a455476b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44804,7 +44812,7 @@ GameObject:
   - component: {fileID: 1460100938}
   - component: {fileID: 1460100937}
   - component: {fileID: 1460100936}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Player 3
   m_TagString: Player3
   m_Icon: {fileID: 0}
@@ -44933,7 +44941,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1509323339
-  m_SortingLayer: 3
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -3318188226485093758, guid: ae72133dacba6ec4eb33ecde48f50e56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -45585,7 +45593,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
@@ -46329,7 +46337,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5900767202761631284, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 7944684108412347865, guid: cb4230ea0863a0d49881590b5a4e1aa9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46962,7 +46970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
@@ -52585,7 +52593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 892490059271251217, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: playerLayer.m_Bits
-      value: 64
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 3050501621304168091, guid: f0dba3d52b89f914db5269216c40d8f0, type: 3}
       propertyPath: m_Name
