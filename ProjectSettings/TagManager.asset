@@ -25,6 +25,7 @@ TagManager:
   - Enemy
   - Coins
   - Bullet
+  - enemy
   layers:
   - Default
   - TransparentFX
