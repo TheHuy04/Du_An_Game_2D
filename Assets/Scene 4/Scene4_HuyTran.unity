@@ -977,7 +977,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -987,7 +987,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1042,10 +1042,10 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 738064338, guid: 9cfe33d9502090742bbc60d34202cf3d, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1894957147, guid: 9cfe33d9502090742bbc60d34202cf3d, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -2032820739, guid: 9cfe33d9502090742bbc60d34202cf3d, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 1772334020, guid: 9cfe33d9502090742bbc60d34202cf3d, type: 3}
   - m_RefCount: 0
@@ -1060,10 +1060,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -2032820739, guid: 9cfe33d9502090742bbc60d34202cf3d, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1894957147, guid: 9cfe33d9502090742bbc60d34202cf3d, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 6
     m_Data:
@@ -32724,7 +32724,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1930658474}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2077453197}
+        m_TargetAssemblyTypeName: NewBehaviourScript, Assembly-CSharp
+        m_MethodName: thembot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1930658474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33494,7 +33506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ped: {fileID: 2046753981}
   xpt: {fileID: 2046753980}
-  cua2: {fileID: 0}
+  cua2: {fileID: 184924734}
 --- !u!61 &2046753984
 BoxCollider2D:
   m_ObjectHideFlags: 0

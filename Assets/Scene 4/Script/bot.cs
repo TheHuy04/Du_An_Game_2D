@@ -36,6 +36,7 @@ public class bot : MonoBehaviour
         if (collision.CompareTag("bossfire") || collision.CompareTag("Enemys"))
         {
             hp -= 0.1f;
+            Destroy(collision.gameObject);
         }
     }
     IEnumerator shootte()
